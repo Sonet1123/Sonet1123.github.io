@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKM Rokonuzzaman Sonet — Personal Site</title>
+  <meta name="description" content="AKM Rokonuzzaman Sonet — Ph.D. candidate in Financial Mathematics. Quant finance, ML, derivatives, teaching." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0c10; --card:#121318; --text:#e8eaed; --muted:#a9b0b6; --brand:#8ab4f8; --accent:#9ed36a;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f8fa; --card:#ffffff; --text:#0f172a; --muted:#475569; --brand:#1d4ed8; --accent:#16a34a; }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); line-height:1.6}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,12,16,.8);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+    @media (prefers-color-scheme: light){ header{background:rgba(247,248,250,.85);} }
+    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    nav .links{display:flex;gap:16px;flex-wrap:wrap}
+    nav a{font-weight:600;opacity:.9}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:var(--card);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .hero h1{font-size:42px;line-height:1.15;margin:0 0 8px}
+    .subtitle{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;background:var(--card);font-weight:600;box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:white;border:none}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+    section{padding:30px 0}
+    h2{font-size:24px;margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .col-4{grid-column: span 4}
+    .col-6{grid-column: span 6}
+    .col-12{grid-column: span 12}
+    @media (max-width: 860px){ .hero{grid-template-columns:1fr} .col-4,.col-6{grid-column: span 12} }
+    .kicker{font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    ul.clean{list-style:none;margin:0;padding:0}
+    .item{display:flex;gap:14px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);margin-top:9px;flex:0 0 10px}
+    .muted{color:var(--muted)}
+    footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted)}
+    img.portrait{width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);object-fit:cover;aspect-ratio:1}
+    .badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);display:inline-block}
+    .taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">ARS<span class="badge">Personal Site</span></div>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="col-6">
+        <span class="kicker">AKM Rokonuzzaman Sonet</span>
+        <h1>Ph.D. Candidate · Financial Mathematics</h1>
+        <p class="subtitle">Quant finance, stochastic optimization, and machine learning. Building pricing engines, risk models, and theory for heavy‑tailed SGD. Graduate Teaching Assistant at Florida State University.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="resume.pdf" target="_blank">Download CV</a>
+          <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <img class="portrait" src="portrait.jpg" alt="Portrait placeholder. Replace with your photo." />
+          <p class="muted" style="margin-top:10px">Replace <span class="mono">portrait.jpg</span> with your photo. Keep a square image for best results.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <p>I study theoretical machine learning and quantitative finance, with interests in algorithmic stability, heavy‑tailed phenomena in SGD, and derivatives pricing. I enjoy building clean, well‑tested Python models and writing clear LaTeX reports.</p>
+            <div class="taglist">
+              <span class="badge">Quant Finance</span>
+              <span class="badge">Stochastic Processes</span>
+              <span class="badge">Derivatives</span>
+              <span class="badge">Python</span>
+              <span class="badge">LaTeX</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="item"><span class="dot"></span><div>
+              <strong>Research Focus.</strong> Algorithmic stability & generalization of SGD/DE‑SGD (heavy‑tailed noise), homogenized SDEs.
+            </div></div>
+            <div class="item"><span class="dot"></span><div>
+              <strong>Teaching.</strong> Instructor/TA for Calculus I–III, College Algebra, Trigonometry, Discrete Math.
+            </div></div>
+            <div class="item"><span class="dot"></span><div>
+              <strong>Tools.</strong> NumPy, SciPy, pandas, scikit‑learn, PyTorch, Matplotlib; GitHub; Overleaf.
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <div class="kicker">Derivatives Engine</div>
+            <h3 style="margin-top:6px;margin-bottom:8px">European Options Pricing & Greeks</h3>
+            <p>Black‑Scholes analytics and Monte Carlo with pathwise/likelihood‑ratio Greeks; implied‑volatility estimation (Newton–Raphson, Brent).</p>
+            <div class="taglist"><span class="badge">Black‑Scholes</span><span class="badge">Monte Carlo</span><span class="badge">Greeks</span></div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="kicker">American Options</div>
+            <h3 style="margin-top:6px;margin-bottom:8px">CRR, LSM, & Crank–Nicolson</h3>
+            <p>Binomial & trinomial trees, Least‑Squares Monte Carlo with convergence analysis, PDE FDM for free‑boundary puts.</p>
+            <div class="taglist"><span class="badge">CRR</span><span class="badge">LSM</span><span class="badge">PDE</span></div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="kicker">Hedging</div>
+            <h3 style="margin-top:6px;margin-bottom:8px">Delta‑Hedging Simulator</h3>
+            <p>Backtests with transaction costs; extensions to stochastic vol (Heston/GARCH), model‑consistent deltas via inner MC.</p>
+            <div class="taglist"><span class="badge">Backtest</span><span class="badge">Heston</span><span class="badge">GARCH</span></div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="kicker">Credit Risk</div>
+            <h3 style="margin-top:6px;margin-bottom:8px">Auto‑Loan Default Modeling</h3>
+            <p>Logistic vs tree‑based models; SMOTE for imbalance; fairness checks; SHAP/LIME explanations; business insights.</p>
+            <div class="taglist"><span class="badge">Classification</span><span class="badge">Fairness</span><span class="badge">Explainability</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <div class="card">
+        <ul class="clean">
+          <li class="item"><span class="dot"></span><div><strong>Calculus II (Instructor of Record).</strong> Techniques of integration, sequences/series, Taylor.
+          </div></li>
+          <li class="item"><span class="dot"></span><div><strong>Calculus I & III; College Algebra; Trigonometry; Discrete Math (TA/Recitation).</strong></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications & Preprints</h2>
+      <div class="card">
+        <p class="muted">Add your arXiv/SSRN links here. Example format:</p>
+        <ul>
+          <li><strong>Heavy‑Tail Emergence in Stochastic Gradient Methods.</strong> <a href="#">arXiv:YYYY.NNNNN</a> (2025)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <p><strong>Email:</strong> <a href="mailto:youremail@fsu.edu">youremail@fsu.edu</a></p>
+            <p><strong>Location:</strong> Florida, USA</p>
+            <p class="muted">Tip: replace the email above and connect the buttons in the hero section to your real profiles.</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <form class="pill" onsubmit="event.preventDefault(); window.location='mailto:youremail@fsu.edu?subject=Hello%20from%20your%20website';">
+              <input aria-label="Your email" placeholder="Your email" style="all:unset;padding:8px 10px;min-width:180px" />
+              <button class="btn" type="submit">Say Hello</button>
+            </form>
+            <p class="muted" style="margin-top:10px">This form opens your email client. For more advanced forms, you can connect free services like Netlify Forms later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> AKM Rokonuzzaman Sonet. Built with a single HTML file. Free to host on GitHub Pages.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
