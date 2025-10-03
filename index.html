@@ -14,6 +14,7 @@
       --muted:#555555;
       --brand:#003366;
       --accent:#0066cc;
+      --border:#dddddd;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
@@ -21,21 +22,26 @@
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:#ffffffeb;border-bottom:1px solid #ddd;z-index:10}
+
+    header{position:sticky;top:0;background:#ffffffeb;border-bottom:1px solid var(--border);z-index:10}
     nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    nav .links{display:flex;gap:16px;flex-wrap:wrap}
-    nav a{font-weight:600;opacity:.95}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .links{display:flex;gap:16px;flex-wrap:wrap}
+    .links a{font-weight:600;opacity:.95}
+    .social{display:flex;gap:12px}
+    .icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;border:1px solid var(--border);background:#fff}
+    .icon svg{width:18px;height:18px}
 
     /* HERO */
     .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:56px 0 36px;text-align:center}
     .hero .name{font-size:56px;line-height:1.05;font-weight:800;margin:0}
     .hero .designation{color:var(--muted);font-size:18px;margin:8px 0 0;font-weight:600}
     .hero .affil{color:var(--muted);font-size:16px;margin:4px 0 0}
-    .hero .about{max-width:900px;margin:16px auto 0;color:var(--text);opacity:.95}
-    img.portrait{width:160px;height:160px;border-radius:50%;border:1px solid #ddd;object-fit:cover}
+    .hero .about{max-width:900px;margin:16px auto 0;color:var(--text)}
+    img.portrait{width:160px;height:160px;border-radius:50%;border:1px solid var(--border);object-fit:cover}
 
-    .card{background:var(--card);border:1px solid #ddd;border-radius:12px;padding:20px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
     section{padding:28px 0}
     h2{font-size:24px;margin:0 0 12px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
@@ -47,11 +53,12 @@
     .taglist{display:flex;flex-wrap:wrap;gap:8px}
     .badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
 
+    /* Projects grid */
     .projgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .projcard img{width:100%;border-radius:12px;border:1px solid #ddd;aspect-ratio:16/9;object-fit:cover}
+    .projcard img{width:100%;border-radius:12px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover}
     .projcard h3{margin:.5rem 0 .25rem;font-size:18px}
 
-    footer{padding:36px 0;border-top:1px solid #ddd;text-align:center;color:var(--muted)}
+    footer{padding:36px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -59,13 +66,32 @@
     <div class="container">
       <nav>
         <div class="brand">A K M R Sonet <span class="badge">Personal Site</span></div>
-        <div class="links">
-          <a href="./">Home</a>
-          <a href="research.html">Research</a>
-          <a href="projects.html">Projects</a>
-          <a href="cv.html">CV</a>
-          <a href="teaching.html">Teaching</a>
-          <a href="#contact">Contact</a>
+
+        <div class="nav-right">
+          <!-- main site links -->
+          <div class="links">
+            <a href="./">Home</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="cv.html">CV</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <!-- social icons -->
+          <div class="social">
+            <a class="icon" href="https://github.com/Sonet1123" target="_blank" rel="noopener" aria-label="GitHub">
+              <!-- GitHub SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.8 1.3 1.8 1.3 1 .1.7 1.9 2.9 1.4.1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.6 1.2-3.5-.1-.3-.5-1.7.1-3.6 0 0 1-.3 3.5 1.3a12.2 12.2 0 0 1 6.4 0c2.5-1.6 3.5-1.3 3.5-1.3.6 1.9.2 3.3.1 3.6.8.9 1.2 2.1 1.2 3.5 0 4.8-2.9 5.9-5.6 6.2.4.3.7.9.7 1.8v2.6c0 .3.2.7.8.6 4.7-1.6 8.1-6 8.1-11.2A11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+            <a class="icon" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <!-- LinkedIn SVG -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.5 8.9h3v11.6h-3zM9 8.9h2.9v1.6h.1c.4-.8 1.5-1.7 3-1.7 3.3 0 3.9 2.1 3.9 4.9v6.8h-3v-6c0-1.4 0-3.2-2-3.2-2 0-2.3 1.5-2.3 3.1v6.1H9z"/></svg>
+            </a>
+            <a class="icon" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <!-- Simple "G" mark for Scholar -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" fill="#fff"/><text x="12" y="16" text-anchor="middle" font-family="Inter, Arial" font-size="12" fill="#1a73e8">G</text></svg>
+            </a>
+          </div>
         </div>
       </nav>
     </div>
@@ -110,7 +136,23 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
+    <!-- RESEARCH INTERESTS (now before projects) -->
+    <section id="research-intro">
+      <h2>Research Interests</h2>
+      <div class="card">
+        <ul>
+          <li>Optimization and Machine Learning Theory</li>
+          <li>Algorithmic Stability and Generalization</li>
+          <li>Data Science</li>
+          <li>Computational Finance and Derivatives Pricing</li>
+          <li>Financial Risk Management</li>
+          
+        </ul>
+        <p class="muted">Details on the <a href="research.html">Research</a> page.</p>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS (synced with projects.html) -->
     <section id="projects">
       <h2>Selected Projects</h2>
       <div class="projgrid">
@@ -118,46 +160,47 @@
         <div class="card projcard">
           <img src="proj-credit.jpg" alt="Auto-Loan Credit Decision Model preview">
           <h3>Auto-Loan Credit Decision Model</h3>
-          <p class="muted">[Add a short summary here later]</p>
+          <p class="muted">Classification of loan defaults using Logistic Regression, Random Forest, XGBoost, SMOTE, SHAP explainability.</p>
           <p><a href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
 
         <div class="card projcard">
           <img src="proj-lstm.jpg" alt="Stock Price Prediction using LSTM preview">
           <h3>Stock Price Prediction using LSTM</h3>
-          <p class="muted">[Add a short summary here later]</p>
+          <p class="muted">Time series forecasting of stock prices with LSTM neural networks and financial data preprocessing.</p>
           <p><a href="https://github.com/Sonet1123/Stock_Price_Prediction_using_LSTM" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
 
         <div class="card projcard">
           <img src="proj-rate.jpg" alt="Interest Rate Model preview">
           <h3>Interest Rate Model</h3>
-          <p class="muted">[Add a short summary here later]</p>
+          <p class="muted">Implementation of Hull–White model for pricing ZCB options, compared with Black-76 using different yield curve constructions.</p>
           <p><a href="https://github.com/Sonet1123/Interest-Rate-Model" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
 
         <div class="card projcard">
           <img src="proj-american.jpg" alt="American Options Pricing preview">
           <h3>American Options Pricing</h3>
-          <p class="muted">[Add a short summary here later]</p>
+          <p class="muted">Pricing using CRR Binomial Tree, Trinomial Tree, Least-Squares Monte Carlo (LSM), and Finite Difference Method.</p>
           <p><a href="https://github.com/Sonet1123/American_Option_Pricing" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
 
         <div class="card projcard">
           <img src="proj-euro.jpg" alt="European Options Pricing preview">
           <h3>European Options Pricing</h3>
-          <p class="muted">[Add a short summary here later]</p>
+          <p class="muted">Black–Scholes pricing engine with Monte Carlo simulations and Greeks estimation.</p>
           <p><a href="https://github.com/Sonet1123/European-Options-Pricing" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
 
         <div class="card projcard">
-          <img src="proj-hedge.jpg" alt="Delta Hedging preview">
+          <img src="proj-hedge.jpg" alt="Delta Hedging under Constant & Stochastic Volatility preview">
           <h3>Delta Hedging (Constant & Stochastic Volatility)</h3>
-          <p class="muted">[Add a short summary here later]</p>
+          <p class="muted">Dynamic hedging simulator under Black–Scholes, Heston, and GARCH models, with transaction cost analysis.</p>
           <p><a href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
 
       </div>
+      <p class="muted" style="margin-top:10px">See more on the <a href="projects.html">Projects</a> page.</p>
     </section>
   </main>
 
