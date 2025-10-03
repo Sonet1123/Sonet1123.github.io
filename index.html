@@ -16,6 +16,16 @@
       --accent:#0066cc;
       --border:#dddddd;
     }
+    html.dark {
+  --bg:#0b0c10;
+  --card:#121318;
+  --text:#e8eaed;
+  --muted:#a9b0b6;
+  --brand:#8ab4f8;
+  --accent:#9ed36a;
+  --border:#2a2d33;
+}
+
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
@@ -61,6 +71,36 @@
     footer{padding:36px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
   </style>
 </head>
+  <script>
+  // SEARCH
+  (function(){
+    const input = document.getElementById('site-search');
+    if(!input) return;
+    const grid = document.querySelector('#projects .projgrid');
+    if(!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.projcard'));
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase();
+      cards.forEach(c => c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none');
+    });
+  })();
+</script>
+
+<script>
+  // THEME TOGGLE
+  (function(){
+    const btn = document.getElementById('theme-toggle');
+    const key = 'prefers-theme';
+    if(localStorage.getItem(key)==='dark'){
+      document.documentElement.classList.add('dark');
+    }
+    if(btn) btn.addEventListener('click', () => {
+      const dark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem(key, dark ? 'dark' : 'light');
+    });
+  })();
+</script>
+
 <body>
   <header>
     <div class="container">
