@@ -1,65 +1,141 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CV — A K M Rokonuzzaman Sonet</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0c10;--card:#121318;--text:#e8eaed;--muted:#a9b0b6;--brand:#8ab4f8}
-*{box-sizing:border-box}html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+:root{
+  --bg:#ffffff; --card:#f9f9f9; --text:#111111; --muted:#555555; --border:#dddddd; --brand:#003366;
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
 main{max-width:900px;margin:0 auto;padding:28px}
 h1{font-size:40px;margin:0 0 4px;font-weight:800}
-.sub{color:var(--muted);margin:0 0 12px}
-.card{background:#121318;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin:16px 0}
-hr{border:0;border-top:1px solid rgba(255,255,255,.12);margin:16px 0}
-.badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);display:inline-block}
-.topnav{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 12px}
+.sub{color:var(--muted);margin:0 0 16px}
+h2{margin:28px 0 12px;font-size:24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:16px 0}
+ul{margin:0;padding-left:18px}
+.badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
+.topnav{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 20px}
+.right{margin-left:auto}
+hr{border:0;border-top:1px solid var(--border);margin:16px 0}
+.small{font-size:14px;color:var(--muted)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 </style>
 </head>
 <body>
 <main>
   <h1>A K M Rokonuzzaman Sonet</h1>
   <p class="sub">Ph.D. Candidate in Financial Mathematics · Florida State University</p>
+
   <div class="topnav">
     <a class="badge" href="./">← Home</a>
-    <a class="badge" href="CV_Sonet.pdf" target="_blank" rel="noopener">Download PDF</a>
-    <a class="badge" href="mailto:asonet@fsu.edu">Email</a>
     <a class="badge" href="https://github.com/Sonet1123" target="_blank" rel="noopener">GitHub</a>
     <a class="badge" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="badge" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    <span class="right"></span>
+    <a class="badge" href="CV_Sonet.pdf" target="_blank" rel="noopener">⬇ Download CV (PDF)</a>
   </div>
 
+  <!-- EDUCATION -->
   <div class="card">
     <h2>Education</h2>
     <ul>
-      <li>Ph.D. Candidate, Financial Mathematics — Florida State University</li>
+      <li><strong>Ph.D., Financial Mathematics</strong>, Florida State University, USA (2022–Present)<br>
+          Thesis: <em>The Heavy-Tail Phenomenon in Stochastic Gradient Descent Methods</em> — Advisor: Dr. Lingjiong Zhu </li>
+      <li><strong>M.S. in Financial Mathematics</strong>, Florida State University, USA (2020–2022)</li>
+      <li><strong>B.S. in Mathematics</strong>, University of Dhaka, Bangladesh (2015–2019)</li>
     </ul>
   </div>
 
+  <!-- RESEARCH INTERESTS -->
   <div class="card">
     <h2>Research Interests</h2>
     <ul>
-      <li>Heavy-tailed Stochastic Optimization; SGD Dynamics and Generalization</li>
-      <li>Data Science & Deep Learning</li>
-      <li>Financial Engineering; Risk Management</li>
+      <li>Optimization and Machine Learning Theory</li>
+      <li>Algorithmic Stability and Generalization</li>
+      <li>Data Science</li>
+      <li>Computational Finance and Derivatives Pricing</li>
+      <li>Financial Risk Management</li>
+      
     </ul>
   </div>
 
+  <!-- EXPERIENCE -->
   <div class="card">
-    <h2>Experience & Teaching</h2>
+    <h2>Work Experience</h2>
     <ul>
-      <li>Graduate Teaching Assistant — Calculus I–III, College Algebra, Trigonometry, Discrete Mathematics</li>
+      <li><strong>Instructor of Record</strong>, Department of Mathematics, Florida State University (2022–Present)<br>
+          Courses: Calculus I–III (e.g., Calc III — Fall 2025; Calc II — Spring 2025, Fall 2024; Calc I — Spring 2024). Designed syllabus, instruction, assessment, grading (~30 students/term).</li>
+      <li><strong>Recitation Instructor</strong>, Department of Mathematics, Florida State University (2022–2023)<br>
+          Courses: Discrete Mathematics I/II; Calculus I. Ran problem sessions, office hours, quizzes; coordinated with course instructors.</li>
+      <li><strong>Assistant in Course Development</strong>, Florida State University (Summer 2024)<br>
+          Calculus I — content & assessment development aligned to outcomes.</li>
+      <li><strong>Graduate Research Assistant</strong>, Florida State University (Summers 2023 & 2025)<br>
+          Project: Heavy-Tail Methods in Machine Learning (SGD variants; algorithmic stability; tail indices & generalization).</li>
+      <li><strong>Graduate Teaching Assistant</strong>, Florida State University (Jan–Dec 2021)<br>
+          Taught Pre-Calculus Algebra; assisted across undergraduate courses, led discussions, graded, and held office hours.</li>
     </ul>
   </div>
 
+  <!-- PUBLICATIONS -->
   <div class="card">
     <h2>Publications & Preprints</h2>
     <ul>
-      <li>(Add your arXiv/SSRN links here)</li>
+      <li>
+        Dang, T., Barsbey, M., <strong>A. K. M. R. Sonet</strong>, Gurbuzbalaban, M., Simsekli, U., &amp; Zhu, L. (2025).
+        <em>Algorithmic Stability of Stochastic Gradient Descent with Momentum under Heavy-Tailed Noise</em>.
+        <a href="https://arxiv.org/abs/2502.00885" target="_blank" rel="noopener">arXiv:2502.00885</a>
+      </li>
+      <!-- Add more items like:
+      <li>Author(s) (Year). <em>Title</em>. <a href="LINK">doi/arXiv/PDF</a></li>
+      -->
     </ul>
   </div>
+
+  <!-- PRESENTATIONS -->
+  <div class="card">
+    <h2>Presentations</h2>
+    <ul>
+      <li>“Applied Quantitative Finance: A Project Portfolio”, Quant Finance Boot Camp, Erdős Institute (June 2025). Topics: Portfolio Optimization, Delta Hedging, Option Pricing. 
+        <!-- Optional slides file: -->
+        <!-- <a href="talks/erdos-portfolio-2025.pdf" target="_blank" rel="noopener">Slides (PDF)</a> -->
+      </li>
+      <li>“Stock Price Prediction using LSTM”, Data Science Boot Camp, Erdős Institute (June 2022).
+        <!-- <a href="talks/lstm-stock-2022.pdf" target="_blank" rel="noopener">Slides (PDF)</a> -->
+      </li>
+      <li>“Study of Some Basic Epidemiological Models”, Dept. of Mathematics, University of Dhaka (Dec 2018).
+        <!-- <a href="talks/epi-models-2018.pdf" target="_blank" rel="noopener">Slides (PDF)</a> -->
+      </li>
+    </ul>
+    <p class="small">To attach slides later, upload PDFs (e.g., <code>talks/my-talk.pdf</code>) and un-comment the “Slides (PDF)” link.</p>
+  </div>
+
+  <!-- AWARDS -->
+  <div class="card">
+    <h2>Awards</h2>
+    <ul>
+      <li>Bettye Anne Busbee Case Graduate Fellowship — FSU Mathematics (2024)</li>
+      <li>FSU Math Distinguished Teaching Assistant Award (2024)</li>
+      <li>University Scholarship — University of Dhaka (2019)</li>
+      <li>Duke of Edinburgh’s Award: Bronze Level (2018)</li>
+      <li>Champion, Intra-Department Mathematics Contest — University of Dhaka (2015)</li>
+    </ul>
+  </div>
+
+  <!-- PROFESSIONAL MEMBERSHIPS -->
+  <div class="card">
+    <h2>Professional Memberships</h2>
+    <ul>
+      <li>American Mathematical Society (AMS)</li>
+      <li>Society for Industrial and Applied Mathematics (SIAM)</li>
+      <li>Bangladesh Mathematical Society (BMS)</li>
+    </ul>
+  </div>
+
 </main>
 </body>
 </html>
