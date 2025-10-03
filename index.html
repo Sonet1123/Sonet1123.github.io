@@ -4,7 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A K M Rokonuzzaman Sonet — Home</title>
-  <meta name="description" content="Ph.D. Candidate in Financial Mathematics at Florida State University. Heavy‑tailed stochastic optimization, SGD dynamics, data science, financial engineering." />
+  <meta name="description" content="Ph.D. Candidate in Financial Mathematics at Florida State University. Heavy-tailed stochastic optimization, SGD dynamics & generalization, data science, financial engineering, risk management." />
+  <meta property="og:title" content="A K M Rokonuzzaman Sonet — Personal Site">
+  <meta property="og:description" content="Ph.D. Candidate in Financial Mathematics at Florida State University. Heavy-tailed stochastic optimization, SGD dynamics & generalization.">
+  <meta property="og:image" content="sonet.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{--bg:#0b0c10;--card:#121318;--text:#e8eaed;--muted:#a9b0b6;--brand:#8ab4f8;--accent:#9ed36a}
@@ -21,40 +25,45 @@
     nav .links{display:flex;gap:16px;flex-wrap:wrap}
     nav a{font-weight:600;opacity:.95}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:40px 0}
-    .hero h1{font-size:40px;line-height:1.15;margin:0 0 8px}
-    .subtitle{color:var(--muted);font-size:18px;margin:0 0 18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:56px 0 36px;text-align:center}
+    .hero .name{font-size:56px;line-height:1.05;font-weight:800;margin:0}
+    .hero .designation{color:var(--muted);font-size:18px;margin:8px 0 0;font-weight:600}
+    .hero .affil{color:var(--muted);font-size:16px;margin:4px 0 0}
+    .hero .about{max-width:900px;margin:16px auto 0;color:var(--text);opacity:.95}
+    .hero .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    img.portrait{width:160px;height:160px;border-radius:50%;border:1px solid rgba(255,255,255,.08);object-fit:cover}
+
     .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;background:var(--card);font-weight:600}
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:white;border:none}
+
     .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
     section{padding:28px 0}
     h2{font-size:24px;margin:0 0 12px}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-    .col-4{grid-column:span 4}
     .col-6{grid-column:span 6}
     .col-12{grid-column:span 12}
-    @media (max-width:860px){.hero{grid-template-columns:1fr}.col-4,.col-6{grid-column:span 12}}
+    @media (max-width:860px){.col-6{grid-column:span 12}}
+
     .kicker{font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-    ul.clean{list-style:none;margin:0;padding:0}
-    .item{display:flex;gap:14px}
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);margin-top:9px;flex:0 0 10px}
     .muted{color:var(--muted)}
-    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted)}
-    img.portrait{width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.08);object-fit:cover;aspect-ratio:1}
+    .taglist{display:flex;flex-wrap:wrap;gap:8px}
     .badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);display:inline-block}
-    .taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+
+    /* Projects grid */
     .projgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
     .projcard img{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);aspect-ratio:16/9;object-fit:cover}
     .projcard h3{margin:.5rem 0 .25rem;font-size:18px}
+
+    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <div class="brand">AKMR Sonet <span class="badge">Personal Site</span></div>
+        <div class="brand">A K M R Sonet <span class="badge">Personal Site</span></div>
         <div class="links">
           <a href="#home">Home</a>
           <a href="#research">Research</a>
@@ -62,65 +71,73 @@
           <a href="#cv">CV</a>
           <a href="#teaching">Teaching</a>
           <a href="#contact">Contact</a>
+          <a href="links.html">Links</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main class="container" id="home">
-    <!-- ===== HERO / HOME ===== -->
+    <!-- HERO -->
     <section class="hero">
-      <div class="col-6">
-        <span class="kicker">A K M Rokonuzzaman Sonet</span>
-        <h1>Ph.D. Candidate in Financial Mathematics</h1>
-        <p class="subtitle">Florida State University</p>
-        <p class="subtitle">  I am a Ph.D. candidate in Financial Mathematics at Florida State University with expertise in quantitative finance, Monte Carlo methods, stochastic optimization, and machine learning. Under the supervision of Dr. Lingjiong Zhu, my research investigates the emergence of heavy tails in stochastic gradient methods, particularly SGD with momentum and Decentralized SGD. My applied projects span option pricing, credit risk modeling, interest rate modeling, and deep learning for financial prediction. I am passionate about leveraging advanced quantitative techniques and data-driven methods to drive innovation in quantitative research, model development, and financial solutions.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+        <img class="portrait" src="sonet.jpg" alt="Portrait of A K M Rokonuzzaman Sonet" />
+        <h1 class="name">A K M Rokonuzzaman Sonet</h1>
+        <div class="designation">Ph.D. Candidate in Financial Mathematics</div>
+        <div class="affil">Florida State University</div>
+        <p class="about">
+          I am a Ph.D. candidate in Financial Mathematics at Florida State University with expertise in quantitative finance, Monte Carlo methods, stochastic optimization, and machine learning. Working with
+          <a href="https://www.math.fsu.edu/DepartmentNews/Articles/Fac_Zhu.math" target="_blank" rel="noopener">Dr. Lingjiong Zhu</a>, my research investigates the emergence of heavy tails in stochastic gradient methods, particularly SGD with momentum and Decentralized SGD.
+          My applied projects span option pricing, credit risk modeling, interest rate modeling, and deep learning for financial prediction. I am passionate about leveraging advanced quantitative techniques and data-driven methods to drive innovation in quantitative research, model development, and financial solutions.
+        </p>
         <div class="cta">
-          <a class="btn primary" href="#contact">Say Hello</a>
-          <a class="btn" href="cv.html">View CV</a>
+          <a class="btn primary" href="#contact">Contact</a>
+          <a class="btn" href="cv.html">CV</a>
+          <a class="btn" href="research.html">Research</a>
           <a class="btn" href="projects.html">Projects</a>
+          <a class="btn" href="teaching.html">Teaching</a>
+          <a class="btn" href="CV_Sonet.pdf" target="_blank" rel="noopener">Download CV</a>
           <a class="btn" href="https://github.com/Sonet1123" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="card">
-          <img class="portrait" src="portrait.jpg" alt="Portrait of A K M Rokonuzzaman Sonet" />
-          <p class="muted" style="margin-top:8px">Upload <span class="mono">portrait.jpg</span> (square) to the repo root.</p>
+          <a class="btn" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== QUICK CONTACT & INFO ===== -->
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
       <div class="grid">
-        <div class="col-6"><div class="card">
-          <p><strong>Email:</strong> <a href="mailto:asonet@fsu.edu">asonet@fsu.edu</a></p>
-          <p><strong>Office:</strong> LOV 331A</p>
-          <p><strong>Location:</strong> Florida, USA</p>
-          <div class="taglist">
-            <span class="badge">GitHub</span>
-            <span class="badge">LinkedIn</span>
-            <span class="badge">Google Scholar</span>
+        <div class="col-6">
+          <div class="card">
+            <p><strong>Email:</strong> <a href="mailto:asonet@fsu.edu">asonet@fsu.edu</a> · <a href="mailto:kmsonet4s5@gmail.com">kmsonet4s5@gmail.com</a></p>
+            <p><strong>Office:</strong> LOV 331 A</p>
+            <p><strong>Location:</strong> Florida, USA</p>
+            <div class="taglist" style="margin-top:8px">
+              <a class="badge" href="https://github.com/Sonet1123" target="_blank" rel="noopener">GitHub</a>
+              <a class="badge" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="badge" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            </div>
           </div>
-        </div></div>
-        <div class="col-6"><div class="card">
-          <form onsubmit="event.preventDefault(); window.location='mailto:asonet@fsu.edu?subject=Hello%20from%20your%20website';">
-            <input aria-label="Your email" placeholder="Your email" style="all:unset;padding:10px 12px;min-width:180px;border:1px solid rgba(255,255,255,.14);border-radius:10px;margin-right:8px" />
-            <button class="btn" type="submit">Email Me</button>
-          </form>
-          <p class="muted" style="margin-top:8px">This opens your email client. For a real form, wire Netlify Forms or Formspree later.</p>
-        </div></div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <form onsubmit="event.preventDefault(); window.location='mailto:asonet@fsu.edu?subject=Hello%20from%20your%20website';">
+              <input aria-label="Your email" placeholder="Your email" style="all:unset;padding:10px 12px;min-width:180px;border:1px solid rgba(255,255,255,.14);border-radius:10px;margin-right:8px" />
+              <button class="btn" type="submit">Email Me</button>
+            </form>
+            <p class="muted" style="margin-top:8px">This opens your email client. For a real form, connect Netlify Forms or Formspree later.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== RESEARCH INTERESTS ===== -->
+    <!-- RESEARCH INTERESTS -->
     <section id="research">
       <h2>Research Interests</h2>
       <div class="card">
         <ul>
-          <li>Heavy‑tailed Stochastic Optimization</li>
+          <li>Heavy-tailed Stochastic Optimization</li>
           <li>SGD Dynamics and Generalization</li>
           <li>Data Science & Deep Learning</li>
           <li>Financial Engineering</li>
@@ -130,38 +147,63 @@
       </div>
     </section>
 
-    <!-- ===== FEATURED PROJECTS (GRID) ===== -->
+    <!-- FEATURED PROJECTS -->
     <section id="projects">
-      <h2>Featured Projects</h2>
+      <h2>Selected Projects</h2>
       <div class="projgrid">
+
         <div class="card projcard">
-          <img src="proj-euro.jpg" alt="European options pricing preview" />
-          <h3>European Options Pricing & Greeks</h3>
-          <p>Black‑Scholes analytics + Monte Carlo; implied‑vol estimation via Newton–Raphson/Brent.</p>
-          <p><a href="https://github.com/Sonet1123/European-Options-Pricing" target="_blank">View on GitHub →</a></p>
+          <img src="proj-credit.jpg" alt="Auto-Loan Credit Decision Model preview">
+          <h3>Auto-Loan Credit Decision Model</h3>
+          <p class="muted">[Add a short summary here later]</p>
+          <p><a href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
+
         <div class="card projcard">
-          <img src="proj-hedge.jpg" alt="Delta‑hedging simulator preview" />
-          <h3>Delta‑Hedging Simulator</h3>
-          <p>Backtests with transaction costs; Heston/GARCH volatility; model‑consistent deltas.</p>
-          <p><a href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models" target="_blank">View on GitHub →</a></p>
+          <img src="proj-lstm.jpg" alt="Stock Price Prediction using LSTM preview">
+          <h3>Stock Price Prediction using LSTM</h3>
+          <p class="muted">[Add a short summary here later]</p>
+          <p><a href="https://github.com/Sonet1123/Stock_Price_Prediction_using_LSTM" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
+
         <div class="card projcard">
-          <img src="proj-credit.jpg" alt="Credit risk model preview" />
-          <h3>Auto‑Loan Credit Decision Model</h3>
-          <p>Logistic vs tree‑based models; SMOTE imbalance handling; fairness checks; SHAP/LIME.</p>
-          <p><a href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model" target="_blank">View on GitHub →</a></p>
+          <img src="proj-rate.jpg" alt="Interest Rate Model preview">
+          <h3>Interest Rate Model</h3>
+          <p class="muted">[Add a short summary here later]</p>
+          <p><a href="https://github.com/Sonet1123/Interest-Rate-Model" target="_blank" rel="noopener">View on GitHub →</a></p>
         </div>
+
+        <div class="card projcard">
+          <img src="proj-american.jpg" alt="American Options Pricing preview">
+          <h3>American Options Pricing</h3>
+          <p class="muted">[Add a short summary here later]</p>
+          <p><a href="https://github.com/Sonet1123/American_Option_Pricing" target="_blank" rel="noopener">View on GitHub →</a></p>
+        </div>
+
+        <div class="card projcard">
+          <img src="proj-euro.jpg" alt="European Options Pricing preview">
+          <h3>European Options Pricing</h3>
+          <p class="muted">[Add a short summary here later]</p>
+          <p><a href="https://github.com/Sonet1123/European-Options-Pricing" target="_blank" rel="noopener">View on GitHub →</a></p>
+        </div>
+
+        <div class="card projcard">
+          <img src="proj-hedge.jpg" alt="Delta Hedging under Constant & Stochastic Volatility preview">
+          <h3>Delta Hedging (Constant & Stochastic Volatility)</h3>
+          <p class="muted">[Add a short summary here later]</p>
+          <p><a href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models" target="_blank" rel="noopener">View on GitHub →</a></p>
+        </div>
+
       </div>
-      <p class="muted" style="margin-top:10px">More on the <a href="projects.html">Projects</a> page.</p>
+      <p class="muted" style="margin-top:10px">See more on the <a href="projects.html">Projects</a> page.</p>
     </section>
 
-    <!-- ===== CV QUICK LINK ===== -->
+    <!-- CV QUICK LINK -->
     <section id="cv">
       <h2>CV</h2>
       <div class="card">
-        <p>Download the latest CV: <a href="resume.pdf" target="_blank">resume.pdf</a></p>
-        <p class="muted">Or view the <a href="cv.html">CV</a> page.</p>
+        <p>Download the latest CV: <a href="CV_Sonet.pdf" target="_blank" rel="noopener">CV_Sonet.pdf</a></p>
+        <p class="muted">Or view the dedicated <a href="cv.html">CV</a> page.</p>
       </div>
     </section>
   </main>
