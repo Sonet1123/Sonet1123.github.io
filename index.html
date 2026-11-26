@@ -1,265 +1,1177 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>A K M Rokonuzzaman Sonet — Home</title>
-  <meta name="description" content="Ph.D. in Financial Mathematics at Florida State University. Heavy-tailed stochastic optimization, SGD dynamics & generalization, data science, financial engineering, risk management." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <meta name="description" content="A K M Rokonuzzaman Sonet, Visiting Assistant Professor of Mathematics at Florida A&M University. Research in stochastic optimization, applied probability, machine learning, and financial mathematics." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#ffffff;
-      --card:#f9f9f9;
-      --text:#111111;
-      --muted:#555555;
-      --brand:#003366;
-      --accent:#0066cc;
-      --border:#dddddd;
+    /* ========================================
+       COLOR SETTINGS
+    ======================================== */
+
+    :root {
+      --bg: #ffffff;
+      --card: #f8faf9;
+      --text: #222222;
+      --muted: #60666b;
+      --brand: #174b36;
+      --accent: #e67e22;
+      --border: #dfe5e1;
     }
+
     html.dark {
-      --bg:#0b0c10;
-      --card:#121318;
-      --text:#e8eaed;
-      --muted:#a9b0b6;
-      --brand:#8ab4f8;
-      --accent:#9ed36a;
-      --border:#2a2d33;
+      --bg: #101412;
+      --card: #191f1c;
+      --text: #e8eaed;
+      --muted: #a9b0b6;
+      --brand: #8bc7a4;
+      --accent: #f2a65a;
+      --border: #303a34;
     }
 
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
+    * {
+      box-sizing: border-box;
+    }
 
-    header{position:sticky;top:0;background:#ffffffeb;border-bottom:1px solid var(--border);z-index:10}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
-    .nav-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-    .links{display:flex;gap:16px;flex-wrap:wrap}
-    .links a{font-weight:600;opacity:.95}
-    .social{display:flex;gap:12px}
-    .icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;border:1px solid var(--border);background:#fff}
-    .icon svg{width:18px;height:18px}
+    html {
+      scroll-behavior: smooth;
+    }
 
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:56px 0 36px;text-align:center}
-    .hero .name{font-size:38px;line-height:1.05;font-weight:800;margin:0}
-    .hero .designation{color:var(--muted);font-size:18px;margin:8px 0 0;font-weight:600}
-    .hero .affil{color:var(--muted);font-size:16px;margin:4px 0 0}
-    .hero .about{max-width:900px;margin:16px auto 0;color:var(--text)}
-    img.portrait{width:160px;height:160px;border-radius:50%;border:1px solid var(--border);object-fit:cover}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
 
-    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
-    section{padding:28px 0}
-    h2{font-size:24px;margin:0 0 12px}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-    .col-6{grid-column:span 6}
-    .col-12{grid-column:span 12}
-    @media (max-width:860px){.col-6{grid-column:span 12}}
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
 
-    .muted{color:var(--muted)}
-    .taglist{display:flex;flex-wrap:wrap;gap:8px}
-    .badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
+    a:hover {
+      text-decoration: underline;
+    }
 
-    /* Projects grid */
-    .projgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .projcard img{width:100%;border-radius:12px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover}
-    .projcard h3{margin:.5rem 0 .25rem;font-size:18px}
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 22px 28px;
+    }
 
-    footer{padding:36px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
+    /* ========================================
+       NAVIGATION BAR
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 2px solid var(--brand);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--brand);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .links a.active {
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    #theme-toggle {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* ========================================
+       MAIN TWO-COLUMN LAYOUT
+    ======================================== */
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 215px minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+      padding-top: 45px;
+      padding-bottom: 35px;
+    }
+
+    /* ========================================
+       LEFT SIDEBAR
+    ======================================== */
+
+    .sidebar {
+      padding-right: 20px;
+      border-right: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .portrait {
+      display: block;
+      width: 170px;
+      height: 195px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+
+    .sidebar h3 {
+      font-size: 15px;
+      margin: 20px 0 8px;
+      color: var(--brand);
+    }
+
+    .sidebar p {
+      margin: 5px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .sidebar-links li {
+      margin-bottom: 9px;
+    }
+
+    .sidebar-links a {
+      font-weight: 500;
+    }
+
+    .sidebar-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+
+    .cv-button {
+      display: block;
+      text-align: center;
+      border: 1px solid var(--brand);
+      border-radius: 5px;
+      padding: 9px 12px;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    .cv-button:hover {
+      background: var(--brand);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* ========================================
+       MAIN PROFILE
+    ======================================== */
+
+    .name {
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.25;
+      font-weight: 700;
+      margin: 0 0 10px;
+      letter-spacing: -0.8px;
+    }
+
+    .designation {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--brand);
+      margin: 0;
+    }
+
+    .affiliation {
+      font-size: 17px;
+      margin: 4px 0;
+    }
+
+    .degree {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 5px 0 25px;
+    }
+
+    .profile-heading {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 15px;
+    }
+
+    section {
+      padding: 22px 0;
+    }
+
+    h2 {
+      font-size: 23px;
+      color: var(--brand);
+      font-weight: 600;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .about p {
+      margin: 0 0 15px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    /* ========================================
+       RESEARCH INTERESTS
+    ======================================== */
+
+    .research-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 25px;
+      padding-left: 20px;
+      margin: 10px 0 15px;
+    }
+
+    .research-list li::marker {
+      color: var(--brand);
+    }
+
+    /* ========================================
+       TEACHING
+    ======================================== */
+
+    .teaching-block {
+      border-left: 3px solid var(--brand);
+      padding: 12px 20px;
+      background: var(--card);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 15px;
+    }
+
+    .semester {
+      font-weight: 700;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .university {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 3px 0 10px;
+    }
+
+    .course-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+
+    .course-list li {
+      margin: 6px 0;
+    }
+
+    /* ========================================
+       NEWS AND UPDATES
+    ======================================== */
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 115px 1fr;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand);
+    }
+
+    .news-content {
+      font-size: 14px;
+    }
+
+    /* ========================================
+       SELECTED PROJECTS
+    ======================================== */
+
+    #projects {
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+    }
+
+    .projgrid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .projcard {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      transition: transform 0.2s;
+    }
+
+    .projcard:hover {
+      transform: translateY(-3px);
+    }
+
+    .projcard img {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .projcard h3 {
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 12px 0 8px;
+    }
+
+    .projcard p {
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .project-link {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+    }
+
+    #site-search {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-family: inherit;
+      font-size: 13px;
+      max-width: 100%;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      margin-top: 35px;
+      padding: 15px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ========================================
+       MOBILE RESPONSIVENESS
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .main-layout {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .portrait {
+        width: 145px;
+        height: 165px;
+      }
+
+      .projgrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .research-list {
+        grid-template-columns: 1fr;
+      }
+
+      .links {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 18px 20px;
+      }
+
+      header {
+        position: static;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .links a {
+        font-size: 13px;
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 25px;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 0 0 25px;
+      }
+
+      .portrait {
+        width: 135px;
+        height: 155px;
+      }
+
+      .name {
+        font-size: 28px;
+      }
+
+      .projgrid {
+        grid-template-columns: 1fr;
+      }
+
+      .news-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- ========================================
+       NAVIGATION
+  ========================================= -->
+
   <header>
     <div class="container">
       <nav>
-        <div class="brand">A K M R Sonet <span class="badge">Personal Site</span></div>
+
+        <a class="brand" href="./">
+          A K M R Sonet
+        </a>
 
         <div class="nav-right">
-          <!-- main site links -->
+
           <div class="links">
-            <a href="./">Home</a>
+            <a class="active" href="./">Home</a>
             <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
             <a href="projects.html">Projects</a>
             <a href="cv.html">CV</a>
-            <a href="teaching.html">Teaching</a>
             <a href="#contact">Contact</a>
           </div>
 
-          <!-- social icons -->
-          <div class="social">
-            <a class="icon" href="https://github.com/Sonet1123" target="_blank" rel="noopener" aria-label="GitHub">
-              <!-- GitHub SVG -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.8 1.3 1.8 1.3 1 .1.7 1.9 2.9 1.4.1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.6 1.2-3.5-.1-.3-.5-1.7.1-3.6 0 0 1-.3 3.5 1.3a12.2 12.2 0 0 1 6.4 0c2.5-1.6 3.5-1.3 3.5-1.3.6 1.9.2 3.3.1 3.6.8.9 1.2 2.1 1.2 3.5 0 4.8-2.9 5.9-5.6 6.2.4.3.7.9.7 1.8v2.6c0 .3.2.7.8.6 4.7-1.6 8.1-6 8.1-11.2A11.5 11.5 0 0 0 12 .5z"/></svg>
-            </a>
-            <a class="icon" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <!-- LinkedIn SVG -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.5 8.9h3v11.6h-3zM9 8.9h2.9v1.6h.1c.4-.8 1.5-1.7 3-1.7 3.3 0 3.9 2.1 3.9 4.9v6.8h-3v-6c0-1.4 0-3.2-2-3.2-2 0-2.3 1.5-2.3 3.1v6.1H9z"/></svg>
-            </a>
-            <a class="icon" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-              <!-- Simple "G" mark for Scholar -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" fill="#fff"/><text x="12" y="16" text-anchor="middle" font-family="Inter, Arial" font-size="12" fill="#1a73e8">G</text></svg>
-            </a>
-          </div>
+          <button id="theme-toggle"
+                  aria-label="Toggle light and dark mode"
+                  title="Toggle theme">
+            🌙
+          </button>
 
-          <!-- Search bar -->
-          <input id="site-search" type="search" placeholder="Search…"
-                 style="padding:6px 10px;border:1px solid var(--border);border-radius:8px;min-width:180px" />
-
-          <!-- Theme toggle button -->
-          <button id="theme-toggle" class="icon" title="Toggle theme">🌙</button>
         </div>
       </nav>
     </div>
   </header>
 
-  <main class="container" id="home">
-    <!-- HERO -->
-    <section class="hero">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
-        <img class="portrait" src="sonet.jpg" alt="Portrait of A K M Rokonuzzaman Sonet" />
-        <h1 class="name">A K M Rokonuzzaman Sonet</h1>
-        <div class="designation">Ph.D. in Financial Mathematics</div>
-        <div class="affil">Florida State University</div>
-        <p class="about">
-          I earned my Ph.D. in Financial Mathematics from Florida State University with expertise in quantitative finance, Monte Carlo methods, stochastic optimization, and machine learning. Working with
-          <a href="https://www.math.fsu.edu/DepartmentNews/Articles/Fac_Zhu.math" target="_blank" rel="noopener">Dr. Lingjiong Zhu</a>, my research explores algorithmic stability and generalization of heavy-tailed stochastic gradient algorithms, particulary stochastic gradient descent with momentum (SGDm). I also investigates the emergence of heavy tails in SGDm and Decentralized SGD.
-          My applied projects span option pricing, credit risk modeling, interest rate modeling, and deep learning for financial prediction. I am passionate about leveraging advanced quantitative techniques and data-driven methods to drive innovation in quantitative research, model development, and financial solutions.
+
+  <main class="container">
+
+    <div class="main-layout">
+
+      <!-- ========================================
+           LEFT SIDEBAR
+      ========================================= -->
+
+      <aside class="sidebar" id="contact">
+
+        <img class="portrait"
+             src="sonet.jpg"
+             alt="A K M Rokonuzzaman Sonet" />
+
+        <h3>Contact</h3>
+
+        <p><strong>Department of Mathematics</strong></p>
+
+        <p>Florida A&amp;M University</p>
+
+        <p>Tallahassee, Florida, USA</p>
+
+        <p style="margin-top: 12px;">
+          <strong>Office:</strong> SBIS 414
         </p>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="grid">
-        <div class="col-6">
-          <div class="card">
-            <p><strong>Email:</strong> <a href="mailto:asonet@fsu.edu">asonet@fsu.edu</a> · <a href="mailto:kmsonet4s5@gmail.com">kmsonet4s5@gmail.com</a></p>
-            <p><strong>Office:</strong> LOV 331 A</p>
-            <div class="taglist" style="margin-top:8px">
-              <a class="badge" href="https://github.com/Sonet1123" target="_blank" rel="noopener">GitHub</a>
-              <a class="badge" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="badge" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <p>Download my CV: <a href="Curriculum_Vitae_SONET.pdf" target="_blank" rel="noopener">Curriculum_Vitae_SONET.pdf</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <p style="margin-top: 12px;">
+          <strong>Email:</strong><br>
 
-    <!-- RESEARCH INTERESTS (now before projects) -->
-    <section id="research-intro">
-      <h2>Research Interests</h2>
-      <div class="card">
-        <ul>
-          <li>Stochastic Optimization and Machine Learning Theory</li>
-          <li>Algorithmic Stability and Generalization</li>
-          <li>Data Science</li>
-          <li>Computational Finance and Derivatives Pricing</li>
-          <li>Financial Risk Management</li>
+          <!-- ADD YOUR FAMU EMAIL HERE -->
+
+          <a href="mailto:asonet@fsu.edu">
+            asonet@fsu.edu
+          </a>
+
+          <br>
+
+          <a href="mailto:kmsonet4s5@gmail.com">
+            kmsonet4s5@gmail.com
+          </a>
+        </p>
+
+        <hr class="sidebar-divider">
+
+        <h3>Professional Profiles</h3>
+
+        <ul class="sidebar-links">
+
+          <!--
+          ADD YOUR OFFICIAL FAMU PROFILE HERE:
+
+          <li>
+            <a href="YOUR_FAMU_PROFILE_URL"
+               target="_blank"
+               rel="noopener">
+              FAMU Faculty Profile ↗
+            </a>
+          </li>
+          -->
+
+          <li>
+            <a href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&amp;hl=en"
+               target="_blank" rel="noopener">
+              Google Scholar ↗
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Sonet1123"
+               target="_blank" rel="noopener">
+              GitHub ↗
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/sonet45/"
+               target="_blank" rel="noopener">
+              LinkedIn ↗
+            </a>
+          </li>
+
         </ul>
-        <p class="muted">Details on the <a href="research.html">Research</a> page.</p>
-      </div>
-    </section>
 
-    <!-- SELECTED PROJECTS (synced with projects.html) -->
+        <a class="cv-button"
+           href="Curriculum_Vitae_SONET.pdf"
+           target="_blank"
+           rel="noopener">
+          Download CV (PDF)
+        </a>
+
+      </aside>
+
+
+      <!-- ========================================
+           MAIN ACADEMIC PROFILE
+      ========================================= -->
+
+      <article class="main-content">
+
+        <div class="profile-heading">
+
+          <h1 class="name">
+            A K M Rokonuzzaman Sonet
+          </h1>
+
+          <p class="designation">
+            Visiting Assistant Professor of Mathematics
+          </p>
+
+          <p class="affiliation">
+            Department of Mathematics<br>
+            Florida A&amp;M University
+          </p>
+
+          <p class="degree">
+            Ph.D. in Financial Mathematics,
+            Florida State University
+          </p>
+
+        </div>
+
+
+        <!-- ABOUT ME -->
+
+        <section class="about">
+
+          <h2>About Me</h2>
+
+          <p>
+            I am a Visiting Assistant Professor in the
+            Department of Mathematics at Florida A&amp;M
+            University (FAMU). I received my Ph.D. in
+            Financial Mathematics from Florida State
+            University in 2026 under the supervision of
+            <a href="https://www.math.fsu.edu/DepartmentNews/Articles/Fac_Zhu.math"
+               target="_blank" rel="noopener">
+              Dr. Lingjiong Zhu</a>.
+          </p>
+
+          <p>
+            My research interests lie at the intersection
+            of stochastic optimization, applied probability,
+            machine learning, and financial mathematics.
+            My doctoral research focuses on algorithmic
+            stability and generalization of heavy-tailed
+            stochastic gradient algorithms, particularly
+            stochastic gradient descent with momentum (SGDm),
+            as well as the emergence of heavy tails in
+            stochastic optimization algorithms.
+          </p>
+
+          <p>
+            My broader research interests include stochastic
+            dynamics, sampling algorithms, data science,
+            computational finance, and financial risk
+            management. I am also interested in developing
+            mathematical and computational approaches to
+            real-world problems.
+          </p>
+
+          <p>
+            At Florida A&amp;M University, I teach undergraduate
+            mathematics courses and mentor undergraduate
+            students in applied mathematics and financial
+            mathematics research.
+          </p>
+
+        </section>
+
+
+        <!-- RESEARCH INTERESTS -->
+
+        <section id="research-intro">
+
+          <h2>Research Interests</h2>
+
+          <ul class="research-list">
+            <li>Stochastic Optimization</li>
+            <li>Applied Probability</li>
+            <li>Machine Learning Theory</li>
+            <li>Algorithmic Stability and Generalization</li>
+            <li>Stochastic Dynamics and Sampling</li>
+            <li>Data Science</li>
+            <li>Computational Finance</li>
+            <li>Financial Risk Management</li>
+          </ul>
+
+          <a href="research.html">
+            View research and publications →
+          </a>
+
+        </section>
+
+
+        <!-- CURRENT TEACHING -->
+
+        <section id="current-teaching">
+
+          <h2>Current Teaching</h2>
+
+          <div class="teaching-block">
+
+            <p class="semester">Fall 2026</p>
+
+            <p class="university">
+              Florida A&amp;M University
+            </p>
+
+            <ul class="course-list">
+
+              <li>
+                <strong>MAC 2311</strong> — Calculus I
+              </li>
+
+              <li>
+                <strong>MAC 1105C</strong> — College Algebra
+              </li>
+
+            </ul>
+
+          </div>
+
+          <!--
+          ADD FUTURE SEMESTERS HERE:
+
+          <div class="teaching-block">
+
+            <p class="semester">Spring 2027</p>
+
+            <p class="university">
+              Florida A&amp;M University
+            </p>
+
+            <ul class="course-list">
+              <li>Course Number — Course Name</li>
+              <li>Course Number — Course Name</li>
+            </ul>
+
+          </div>
+          -->
+
+          <a href="teaching.html">
+            View complete teaching history →
+          </a>
+
+        </section>
+
+
+        <!-- UNDERGRADUATE RESEARCH -->
+
+        <section id="mentoring">
+
+          <h2>Undergraduate Research &amp; Mentoring</h2>
+
+          <p>
+            I am interested in engaging undergraduate
+            students in mathematical modeling, computational
+            experiments, and applied research.
+          </p>
+
+          <p>
+            I am currently supervising an undergraduate
+            research project at Florida A&amp;M University
+            on asset–liability management, duration matching,
+            and interest rate risk.
+          </p>
+
+        </section>
+
+
+        <!-- NEWS AND UPDATES -->
+
+        <section id="news">
+
+          <h2>News &amp; Updates</h2>
+
+          <div class="news-item">
+
+            <div class="news-date">
+              Fall 2026
+            </div>
+
+            <div class="news-content">
+              Began mentoring an undergraduate research
+              project in financial mathematics at
+              Florida A&amp;M University.
+            </div>
+
+          </div>
+
+          <div class="news-item">
+
+            <div class="news-date">
+              August 2026
+            </div>
+
+            <div class="news-content">
+              Joined Florida A&amp;M University as a
+              Visiting Assistant Professor in the
+              Department of Mathematics.
+            </div>
+
+          </div>
+
+          <div class="news-item">
+
+            <div class="news-date">
+              2026
+            </div>
+
+            <div class="news-content">
+              Received my Ph.D. in Financial Mathematics
+              from Florida State University.
+            </div>
+
+          </div>
+
+        </section>
+
+      </article>
+
+    </div>
+
+
+    <!-- ========================================
+         SELECTED PROJECTS
+    ========================================= -->
+
     <section id="projects">
-      <h2>Selected Projects</h2>
+
+      <div class="section-heading">
+
+        <h2>Selected Projects</h2>
+
+        <input id="site-search"
+               type="search"
+               aria-label="Search selected projects"
+               placeholder="Search projects..." />
+
+      </div>
+
+      <p class="muted">
+        Selected computational projects in quantitative
+        finance, machine learning, and risk management.
+      </p>
+
       <div class="projgrid">
 
-        <div class="card projcard">
-          <img src="proj-credit.png" alt="Auto-Loan Credit Decision Model preview">
+
+        <!-- PROJECT 1 -->
+
+        <div class="projcard">
+
+          <img src="proj-credit.png"
+               alt="Auto-Loan Credit Decision Model"
+               loading="lazy" />
+
           <h3>Auto-Loan Credit Decision Model</h3>
-          <p class="muted">Classification of loan defaults using Logistic Regression, Random Forest, XGBoost, SMOTE, SHAP explainability.</p>
-          <p><a href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model" target="_blank" rel="noopener">View on GitHub →</a></p>
+
+          <p class="muted">
+            Classification of loan defaults using Logistic
+            Regression, Random Forest, XGBoost, SMOTE,
+            and SHAP explainability.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+
         </div>
 
-        <div class="card projcard">
-          <img src="proj-lstm.png" alt="Stock Price Prediction using LSTM preview">
+
+        <!-- PROJECT 2 -->
+
+        <div class="projcard">
+
+          <img src="proj-lstm.png"
+               alt="Stock Price Prediction using LSTM"
+               loading="lazy" />
+
           <h3>Stock Price Prediction using LSTM</h3>
-          <p class="muted">Time series forecasting of stock prices with LSTM neural networks and financial data preprocessing.</p>
-          <p><a href="https://github.com/Sonet1123/Stock_Price_Prediction_using_LSTM" target="_blank" rel="noopener">View on GitHub →</a></p>
+
+          <p class="muted">
+            Time series forecasting of stock prices using
+            LSTM neural networks and financial data
+            preprocessing.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/Sonet1123/Stock_Price_Prediction_using_LSTM"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+
         </div>
 
-        <div class="card projcard">
-          <img src="proj-rate.png" alt="Interest Rate Model preview">
-          <h3>Interest Rate Model</h3>
-          <p class="muted">Implementation of Hull–White model for pricing ZCB options, compared with Black-76 using different yield curve constructions.</p>
-          <p><a href="https://github.com/Sonet1123/Interest-Rate-Model" target="_blank" rel="noopener">View on GitHub →</a></p>
+
+        <!-- PROJECT 3 -->
+
+        <div class="projcard">
+
+          <img src="proj-rate.png"
+               alt="Interest Rate Model"
+               loading="lazy" />
+
+          <h3>Interest Rate Modeling</h3>
+
+          <p class="muted">
+            Implementation of the Hull–White model for
+            pricing zero-coupon bond options, compared
+            with Black-76 under different yield curves.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/Sonet1123/Interest-Rate-Model"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+
         </div>
 
-        <div class="card projcard">
-          <img src="proj-american.png" alt="American Options Pricing preview">
+
+        <!-- PROJECT 4 -->
+
+        <div class="projcard">
+
+          <img src="proj-american.png"
+               alt="American Options Pricing"
+               loading="lazy" />
+
           <h3>American Options Pricing</h3>
-          <p class="muted">Pricing using CRR Binomial Tree, Trinomial Tree, Least-Squares Monte Carlo (LSM), and Finite Difference Method.</p>
-          <p><a href="https://github.com/Sonet1123/American_Option_Pricing" target="_blank" rel="noopener">View on GitHub →</a></p>
+
+          <p class="muted">
+            Option pricing using CRR Binomial Tree,
+            Trinomial Tree, Least-Squares Monte Carlo,
+            and Finite Difference methods.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/Sonet1123/American_Option_Pricing"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+
         </div>
 
-        <div class="card projcard">
-          <img src="proj-euro.png" alt="European Options Pricing preview">
+
+        <!-- PROJECT 5 -->
+
+        <div class="projcard">
+
+          <img src="proj-euro.png"
+               alt="European Options Pricing"
+               loading="lazy" />
+
           <h3>European Options Pricing</h3>
-          <p class="muted">Black–Scholes pricing engine with Monte Carlo simulations and Greeks estimation.</p>
-          <p><a href="https://github.com/Sonet1123/European-Options-Pricing" target="_blank" rel="noopener">View on GitHub →</a></p>
+
+          <p class="muted">
+            Black–Scholes pricing engine with Monte Carlo
+            simulations and estimation of option Greeks.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/Sonet1123/European-Options-Pricing"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+
         </div>
 
-        <div class="card projcard">
-          <img src="proj-hedge.png" alt="Delta Hedging under Constant & Stochastic Volatility preview">
-          <h3>Delta Hedging (Constant & Stochastic Volatility)</h3>
-          <p class="muted">Dynamic hedging simulator under Black–Scholes, Heston, and GARCH models, with transaction cost analysis.</p>
-          <p><a href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models" target="_blank" rel="noopener">View on GitHub →</a></p>
+
+        <!-- PROJECT 6 -->
+
+        <div class="projcard">
+
+          <img src="proj-hedge.png"
+               alt="Delta Hedging under Constant and Stochastic Volatility"
+               loading="lazy" />
+
+          <h3>Delta Hedging</h3>
+
+          <p class="muted">
+            Dynamic hedging under Black–Scholes, Heston,
+            and GARCH models, including transaction
+            cost analysis.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+
         </div>
 
       </div>
-      <p class="muted" style="margin-top:10px">See more on the <a href="projects.html">Projects</a> page.</p>
+
+      <p id="no-results" class="muted" hidden>
+        No matching projects found.
+      </p>
+
+      <p style="margin-top: 20px;">
+        <a href="projects.html">
+          View all projects →
+        </a>
+      </p>
+
     </section>
+
   </main>
 
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
   <footer>
+
     <div class="container">
-      © <span id="y"></span> A K M Rokonuzzaman Sonet. Built with GitHub Pages.
+
+      © <span id="year"></span>
+      A K M Rokonuzzaman Sonet.
+
+      <br>
+
+      Built with GitHub Pages.
+
     </div>
+
   </footer>
 
-  <script>
-    document.getElementById('y').textContent=new Date().getFullYear()
-  </script>
 
-  <!-- SEARCH -->
-  <script>
-  (function(){
-    const input = document.getElementById('site-search');
-    if(!input) return;
-    const grid = document.querySelector('#projects .projgrid');
-    if(!grid) return;
-    const cards = Array.from(grid.querySelectorAll('.projcard'));
-    input.addEventListener('input', () => {
-      const q = input.value.toLowerCase();
-      cards.forEach(c => c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none');
-    });
-  })();
-  </script>
+  <!-- ========================================
+       JAVASCRIPT
+  ========================================= -->
 
-  <!-- THEME TOGGLE -->
   <script>
-  (function(){
-    const key = 'prefers-theme';
-    const btn = document.getElementById('theme-toggle');
-    if(localStorage.getItem(key)==='dark'){
-      document.documentElement.classList.add('dark');
+
+    // Automatically update the copyright year.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Light and dark mode.
+
+    const themeButton =
+      document.getElementById("theme-toggle");
+
+    const themeKey = "prefers-theme";
+
+    function updateThemeButton() {
+
+      const dark =
+        document.documentElement.classList.contains("dark");
+
+      themeButton.textContent = dark ? "☀️" : "🌙";
     }
-    if(btn) btn.addEventListener('click', () => {
-      const dark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem(key, dark ? 'dark' : 'light');
+
+    if (localStorage.getItem(themeKey) === "dark") {
+
+      document.documentElement.classList.add("dark");
+
+    }
+
+    updateThemeButton();
+
+    themeButton.addEventListener("click", function () {
+
+      const dark =
+        document.documentElement.classList.toggle("dark");
+
+      localStorage.setItem(
+        themeKey,
+        dark ? "dark" : "light"
+      );
+
+      updateThemeButton();
+
     });
-  })();
+
+
+    // Search selected projects.
+
+    const searchInput =
+      document.getElementById("site-search");
+
+    const projectCards =
+      document.querySelectorAll(".projcard");
+
+    const noResults =
+      document.getElementById("no-results");
+
+    searchInput.addEventListener("input", function () {
+
+      const query =
+        searchInput.value.toLowerCase().trim();
+
+      let visibleCount = 0;
+
+      projectCards.forEach(function (card) {
+
+        const match =
+          card.textContent.toLowerCase().includes(query);
+
+        card.style.display = match ? "" : "none";
+
+        if (match) visibleCount++;
+
+      });
+
+      noResults.hidden = visibleCount !== 0;
+
+    });
+
   </script>
+
 </body>
 </html>
