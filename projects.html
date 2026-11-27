@@ -1,80 +1,725 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Projects — A K M Rokonuzzaman Sonet</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#ffffff;--card:#f9f9f9;--text:#111111;--muted:#555555;--border:#dddddd;--brand:#003366;}
-*{box-sizing:border-box}html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
-main{max-width:1100px;margin:0 auto;padding:28px}
-h1{font-size:40px;margin:0 0 4px;font-weight:800}
-.sub{color:var(--muted);margin:0 0 16px}
-h2{margin:20px 0 12px;font-size:24px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
-.badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
-.topnav{margin:8px 0 20px;display:flex;gap:10px;flex-wrap:wrap}
-.projgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-.projcard img{width:100%;border-radius:12px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover}
-.projcard h3{margin:.5rem 0 .25rem;font-size:18px}
-</style>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>Projects — A K M Rokonuzzaman Sonet</title>
+
+  <meta name="description"
+        content="Computational projects by A K M Rokonuzzaman Sonet in quantitative finance, machine learning, and financial mathematics.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    /* ========================================
+       COLOR SETTINGS
+    ======================================== */
+
+    :root {
+      --bg: #ffffff;
+      --card: #f8faf9;
+      --text: #222222;
+      --muted: #60666b;
+      --brand: #174b36;
+      --accent: #e67e22;
+      --border: #dfe5e1;
+    }
+
+    html.dark {
+      --bg: #101412;
+      --card: #191f1c;
+      --text: #e8eaed;
+      --muted: #a9b0b6;
+      --brand: #8bc7a4;
+      --accent: #f2a65a;
+      --border: #303a34;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 22px 28px;
+    }
+
+
+    /* ========================================
+       NAVIGATION BAR
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 2px solid var(--brand);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--brand);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .links a.active {
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    #theme-toggle {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+
+    /* ========================================
+       MAIN PAGE AND HEADINGS
+    ======================================== */
+
+    .page-content {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 45px 28px;
+    }
+
+    .page-heading {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      margin: 0 0 12px;
+    }
+
+    .designation {
+      color: var(--brand);
+      font-weight: 600;
+      font-size: 16px;
+      margin: 4px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+
+    /* ========================================
+       PROJECT GRID
+    ======================================== */
+
+    .projgrid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .projcard {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s ease,
+                  box-shadow 0.2s ease,
+                  border-color 0.2s ease;
+    }
+
+    .projcard:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .projcard img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .projcard h3 {
+      color: var(--brand);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+
+    .projcard p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0 0 18px;
+    }
+
+    .project-link {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-link a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand);
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 15px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 25px;
+    }
+
+
+    /* ========================================
+       RESPONSIVE DESIGN
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .links {
+        gap: 14px;
+      }
+
+      .projgrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 18px 20px;
+      }
+
+      header {
+        position: static;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .links a {
+        font-size: 13px;
+      }
+
+      .page-content {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .projgrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-content {
+        padding: 18px;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .projcard {
+        transition: none;
+      }
+
+      .projcard:hover {
+        transform: none;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-<main>
-  <h1>Projects</h1>
-  <p class="sub">A K M Rokonuzzaman Sonet — Ph.D. Candidate in Financial Mathematics, Florida State University</p>
-  <div class="topnav">
-    <a class="badge" href="./">← Home</a>
-  </div>
 
-  <div class="projgrid">
+  <!-- ========================================
+       NAVIGATION BAR
+  ========================================= -->
 
-    <div class="card projcard">
-      <img src="proj-credit.png" alt="Auto-Loan Credit Decision Model">
-      <h3>Auto-Loan Credit Decision Model</h3>
-      <p class="muted">Classification of loan defaults using Logistic Regression, Random Forest, XGBoost, SMOTE, SHAP explainability.</p>
-      <p><a href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model" target="_blank">View on GitHub →</a></p>
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <a class="brand" href="./">
+          A K M R Sonet
+        </a>
+
+        <div class="nav-right">
+
+          <div class="links">
+
+            <a href="./">Home</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="teaching.html">Teaching</a>
+
+            <a class="active"
+               href="projects.html"
+               aria-current="page">
+              Projects
+            </a>
+
+            <a href="cv.html">CV</a>
+
+            <a href="./#contact">Contact</a>
+
+          </div>
+
+          <button id="theme-toggle"
+                  aria-label="Toggle light and dark mode"
+                  title="Toggle theme">
+            🌙
+          </button>
+
+        </div>
+
+      </nav>
+
     </div>
 
-    <div class="card projcard">
-      <img src="proj-lstm.png" alt="Stock Price Prediction using LSTM">
-      <h3>Stock Price Prediction using LSTM</h3>
-      <p class="muted">Time series forecasting of stock prices with LSTM neural networks and financial data preprocessing.</p>
-      <p><a href="https://github.com/Sonet1123/Stock_Price_Prediction_using_LSTM" target="_blank">View on GitHub →</a></p>
+  </header>
+
+
+  <!-- ========================================
+       MAIN PAGE CONTENT
+  ========================================= -->
+
+  <main class="page-content">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="page-heading">
+
+      <h1>Projects</h1>
+
+      <p class="designation">
+        Visiting Assistant Professor of Mathematics
+      </p>
+
+      <p class="subtitle">
+        A K M Rokonuzzaman Sonet
+      </p>
+
+      <p class="subtitle">
+        Department of Mathematics,
+        Florida A&amp;M University
+      </p>
+
     </div>
 
-    <div class="card projcard">
-      <img src="proj-rate.png" alt="Interest Rate Model">
-      <h3>Interest Rate Model</h3>
-      <p class="muted">Implementation of Hull–White model for pricing ZCB options, compared with Black-76 using different yield curve constructions.</p>
-      <p><a href="https://github.com/Sonet1123/Interest-Rate-Model" target="_blank">View on GitHub →</a></p>
+
+    <!-- ========================================
+         PROJECT GRID
+    ========================================= -->
+
+    <div class="projgrid">
+
+
+      <!-- PROJECT 1: AUTO-LOAN CREDIT DECISION -->
+
+      <div class="projcard">
+
+        <img src="proj-credit.png"
+             alt="Auto-Loan Credit Decision Model">
+
+        <div class="project-content">
+
+          <h3>
+            Auto-Loan Credit Decision Model
+          </h3>
+
+          <p class="muted">
+            Classification of loan defaults using
+            Logistic Regression, Random Forest,
+            XGBoost, SMOTE, SHAP explainability.
+          </p>
+
+          <div class="project-link">
+
+            <a href="https://github.com/Sonet1123/Auto_Loan_Credit_Decisioning_Model"
+               target="_blank"
+               rel="noopener">
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 2: STOCK PRICE PREDICTION -->
+
+      <div class="projcard">
+
+        <img src="proj-lstm.png"
+             alt="Stock Price Prediction using LSTM">
+
+        <div class="project-content">
+
+          <h3>
+            Stock Price Prediction using LSTM
+          </h3>
+
+          <p class="muted">
+            Time series forecasting of stock prices
+            with LSTM neural networks and financial
+            data preprocessing.
+          </p>
+
+          <div class="project-link">
+
+            <a href="https://github.com/Sonet1123/Stock_Price_Prediction_using_LSTM"
+               target="_blank"
+               rel="noopener">
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 3: INTEREST RATE MODEL -->
+
+      <div class="projcard">
+
+        <img src="proj-rate.png"
+             alt="Interest Rate Model">
+
+        <div class="project-content">
+
+          <h3>
+            Interest Rate Model
+          </h3>
+
+          <p class="muted">
+            Implementation of Hull–White model for
+            pricing ZCB options, compared with
+            Black-76 using different yield curve
+            constructions.
+          </p>
+
+          <div class="project-link">
+
+            <a href="https://github.com/Sonet1123/Interest-Rate-Model"
+               target="_blank"
+               rel="noopener">
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 4: AMERICAN OPTIONS PRICING -->
+
+      <div class="projcard">
+
+        <img src="proj-american.png"
+             alt="American Options Pricing">
+
+        <div class="project-content">
+
+          <h3>
+            American Options Pricing
+          </h3>
+
+          <p class="muted">
+            Pricing using CRR Binomial Tree,
+            Trinomial Tree, Least-Squares Monte
+            Carlo (LSM), and Finite Difference Method.
+          </p>
+
+          <div class="project-link">
+
+            <a href="https://github.com/Sonet1123/American_Option_Pricing"
+               target="_blank"
+               rel="noopener">
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 5: EUROPEAN OPTIONS PRICING -->
+
+      <div class="projcard">
+
+        <img src="proj-euro.png"
+             alt="European Options Pricing">
+
+        <div class="project-content">
+
+          <h3>
+            European Options Pricing
+          </h3>
+
+          <p class="muted">
+            Black–Scholes pricing engine with
+            Monte Carlo simulations and Greeks
+            estimation.
+          </p>
+
+          <div class="project-link">
+
+            <a href="https://github.com/Sonet1123/European-Options-Pricing"
+               target="_blank"
+               rel="noopener">
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 6: DELTA HEDGING -->
+
+      <div class="projcard">
+
+        <img src="proj-hedge.png"
+             alt="Delta Hedging">
+
+        <div class="project-content">
+
+          <h3>
+            Delta Hedging (Constant &amp; Stochastic Volatility)
+          </h3>
+
+          <p class="muted">
+            Dynamic hedging simulator under
+            Black–Scholes, Heston, and GARCH models,
+            with transaction cost analysis.
+          </p>
+
+          <div class="project-link">
+
+            <a href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models"
+               target="_blank"
+               rel="noopener">
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ADD FUTURE PROJECTS HERE -->
+
+
     </div>
 
-    <div class="card projcard">
-      <img src="proj-american.png" alt="American Options Pricing">
-      <h3>American Options Pricing</h3>
-      <p class="muted">Pricing using CRR Binomial Tree, Trinomial Tree, Least-Squares Monte Carlo (LSM), and Finite Difference Method.</p>
-      <p><a href="https://github.com/Sonet1123/American_Option_Pricing" target="_blank">View on GitHub →</a></p>
+  </main>
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span>
+      A K M Rokonuzzaman Sonet.
+
+      <br>
+
+      Built with GitHub Pages.
+
     </div>
 
-    <div class="card projcard">
-      <img src="proj-euro.png" alt="European Options Pricing">
-      <h3>European Options Pricing</h3>
-      <p class="muted">Black–Scholes pricing engine with Monte Carlo simulations and Greeks estimation.</p>
-      <p><a href="https://github.com/Sonet1123/European-Options-Pricing" target="_blank">View on GitHub →</a></p>
-    </div>
+  </footer>
 
-    <div class="card projcard">
-      <img src="proj-hedge.png" alt="Delta Hedging">
-      <h3>Delta Hedging (Constant & Stochastic Volatility)</h3>
-      <p class="muted">Dynamic hedging simulator under Black–Scholes, Heston, and GARCH models, with transaction cost analysis.</p>
-      <p><a href="https://github.com/Sonet1123/Delta_Hedging_under_Constant_and_Stochastic_Volatility_Models" target="_blank">View on GitHub →</a></p>
-    </div>
 
-  </div>
-</main>
+  <!-- ========================================
+       JAVASCRIPT
+  ========================================= -->
+
+  <script>
+
+    // Automatically update the copyright year.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Synchronize light and dark mode
+    // across all website pages.
+
+    const themeButton =
+      document.getElementById("theme-toggle");
+
+    const themeKey = "prefers-theme";
+
+    function updateThemeButton() {
+
+      const dark =
+        document.documentElement.classList.contains("dark");
+
+      themeButton.textContent = dark ? "☀️" : "🌙";
+
+    }
+
+    if (localStorage.getItem(themeKey) === "dark") {
+
+      document.documentElement.classList.add("dark");
+
+    }
+
+    updateThemeButton();
+
+    themeButton.addEventListener("click", function () {
+
+      const dark =
+        document.documentElement.classList.toggle("dark");
+
+      localStorage.setItem(
+        themeKey,
+        dark ? "dark" : "light"
+      );
+
+      updateThemeButton();
+
+    });
+
+  </script>
+
 </body>
 </html>
