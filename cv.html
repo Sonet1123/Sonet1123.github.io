@@ -1,145 +1,1412 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CV — A K M Rokonuzzaman Sonet</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#ffffff; --card:#f9f9f9; --text:#111111; --muted:#555555; --border:#dddddd; --brand:#003366;
-}
-*{box-sizing:border-box} html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-main{max-width:900px;margin:0 auto;padding:28px}
-h1{font-size:40px;margin:0 0 4px;font-weight:800}
-.sub{color:var(--muted);margin:0 0 16px}
-h2{margin:28px 0 12px;font-size:24px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:16px 0}
-ul{margin:0;padding-left:18px}
-.badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
-.topnav{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 20px}
-.right{margin-left:auto}
-hr{border:0;border-top:1px solid var(--border);margin:16px 0}
-.small{font-size:14px;color:var(--muted)}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-</style>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>CV — A K M Rokonuzzaman Sonet</title>
+
+  <meta name="description"
+        content="Academic curriculum vitae of A K M Rokonuzzaman Sonet, Visiting Assistant Professor of Mathematics at Florida A&M University.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    /* ========================================
+       COLOR SETTINGS
+    ======================================== */
+
+    :root {
+      --bg: #ffffff;
+      --card: #f8faf9;
+      --text: #222222;
+      --muted: #60666b;
+      --brand: #174b36;
+      --accent: #e67e22;
+      --border: #dfe5e1;
+    }
+
+    html.dark {
+      --bg: #101412;
+      --card: #191f1c;
+      --text: #e8eaed;
+      --muted: #a9b0b6;
+      --brand: #8bc7a4;
+      --accent: #f2a65a;
+      --border: #303a34;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 22px 28px;
+    }
+
+
+    /* ========================================
+       NAVIGATION BAR
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 2px solid var(--brand);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--brand);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .links a.active {
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    #theme-toggle {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+
+    /* ========================================
+       MAIN PAGE
+    ======================================== */
+
+    .page-content {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 45px 28px;
+    }
+
+    .page-heading {
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      line-height: 1.25;
+      margin: 0 0 15px;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+
+    .designation {
+      color: var(--brand);
+      font-weight: 600;
+      font-size: 16px;
+      margin: 4px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    h2 {
+      color: var(--brand);
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 5px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+
+    /* ========================================
+       CV BUTTONS
+    ======================================== */
+
+    .cv-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 22px 0 18px;
+    }
+
+    .cv-button {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--bg);
+      padding: 10px 18px;
+      border: 1px solid var(--brand);
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .cv-button:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+
+    .outline-button {
+      display: inline-block;
+      color: var(--brand);
+      background: var(--card);
+      border: 1px solid var(--brand);
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .outline-button:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .academic-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+
+    /* ========================================
+       CV SECTION NAVIGATION
+    ======================================== */
+
+    .section-nav {
+      display: flex;
+      gap: 10px 18px;
+      flex-wrap: wrap;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 15px 18px;
+      margin-bottom: 35px;
+      font-size: 13px;
+    }
+
+    .section-nav a {
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       CV SECTIONS
+    ======================================== */
+
+    .cv-section {
+      margin-bottom: 35px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 110px;
+    }
+
+    .cv-section:last-child {
+      border-bottom: none;
+    }
+
+    .cv-entry {
+      display: grid;
+      grid-template-columns: 155px minmax(0, 1fr);
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cv-entry:last-child {
+      border-bottom: none;
+    }
+
+    .date {
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .entry-content p {
+      margin: 4px 0;
+    }
+
+    .institution {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .description {
+      font-size: 14px;
+      margin-top: 8px !important;
+    }
+
+    .standard-list {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .standard-list li {
+      margin: 10px 0;
+    }
+
+
+    /* ========================================
+       CURRENT POSITION
+    ======================================== */
+
+    .current-position {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+    }
+
+    .current-position p {
+      margin: 5px 0;
+    }
+
+
+    /* ========================================
+       PUBLICATIONS AND PRESENTATIONS
+    ======================================== */
+
+    .publication {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 15px 0;
+    }
+
+    .publication p {
+      margin: 6px 0;
+    }
+
+    .paper-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .paper-status {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .resource-link {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 4px 10px;
+      margin: 8px 6px 0 0;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 15px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+
+    /* ========================================
+       MOBILE RESPONSIVENESS
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .links {
+        gap: 14px;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 18px 20px;
+      }
+
+      header {
+        position: static;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .links a {
+        font-size: 13px;
+      }
+
+      .page-content {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .name {
+        font-size: 21px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .cv-entry {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .publication,
+      .current-position {
+        padding: 16px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-<main>
-  <h1>A K M Rokonuzzaman Sonet</h1>
-  <p class="sub">Ph.D. in Financial Mathematics | Florida State University</p>
 
-  <div class="topnav">
-    <a class="badge" href="./">← Home</a>
-    <a class="badge" href="https://github.com/Sonet1123" target="_blank" rel="noopener">GitHub</a>
-    <a class="badge" href="https://www.linkedin.com/in/sonet45/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="badge" href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-    <span class="right"></span>
-    <a class="badge" href="Curriculum_Vitae_SONET.pdf" target="_blank" rel="noopener">⬇ Download CV (PDF)</a>
-  </div>
+  <!-- ========================================
+       NAVIGATION BAR
+  ========================================= -->
 
-  <!-- EDUCATION -->
-  <div class="card">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Ph.D. in Financial Mathematics</strong>, Florida State University, USA (2020–2026)<br>
-          Dissertation Title: <em>Algorithmic Stability of Heavy-Tailed Stochastic Gradient Algorithms</em><br>
-          Advisor: Dr. Lingjiong Zhu</li>
-      <li><strong> M.S. in Financial Mathematics</strong>, Florida State University, USA (2020–2022)</li>
-      <li><strong> B.S. in Mathematics</strong>, University of Dhaka, Bangladesh (2015–2019)</li>
-    </ul>
-  </div>
+  <header>
 
-  <!-- RESEARCH INTERESTS -->
-  <div class="card">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Stochastic Optimization and Machine Learning Theory</li>
-      <li>Algorithmic Stability and Generalization</li>
-      <li>Data Science</li>
-      <li>Computational Finance and Derivatives Pricing</li>
-      <li>Financial Risk Management</li>
-      
-    </ul>
-  </div>
+    <div class="container">
 
-  <!-- EXPERIENCE -->
-  <div class="card">
-    <h2>Work Experience</h2>
-    <ul>
-      <li><strong>Instructor of Record</strong>, Department of Mathematics, Florida State University (2022–May 2026)<br>
-        Courses: Calculus and Analytic Geometry I–III (Calc III — Fall 2025, Spring 2026; Calc II — Spring 2025, Fall 2024; Calc I — Spring 2024; Precalculus - Spring 2022)<br>
-        Responsibilities: Syllabus design, Prepare lecture notes, Instruction, Assessment (~30 students/term)</li>
+      <nav>
 
-      <li><strong>Recitation Instructor</strong>, Department of Mathematics, Florida State University (2022–2023)<br>
-        Courses: Discrete Mathematics I/II; Calculus I (Spring, Fall 2023, Summer 2022) <br>
-        Responsibilities: Run problem sessions, Help sessions, Assesment; coordinated with course instructors</li>
-      
-      <li><strong>Assistant in Course Development: Calculus I</strong>, Florida State University (Summer 2024)<br>
-        Responsibilities: Content & assessment development aligned to outcomes</li>
-      
-      <li><strong>Graduate Research Assistant</strong>, Florida State University (Summers 2023 & 2025)<br>
-          Project: The Heavy-Tail Methods in Machine Learning <br>
-          Supervisor: Dr. Lingjiong Zhu</li>
-      
-      <li><strong>Graduate Teaching Assistant</strong>, Florida State University (Jan–Dec 2021)<br>
-        Responsibilities: Assisted across undergraduate courses, led discussions, grading, and held office hours.</li>
-    </ul>
-  </div>
+        <a class="brand" href="./">
+          A K M R Sonet
+        </a>
 
-  <!-- PUBLICATIONS -->
-  <div class="card">
-    <h2>Publications & Preprints</h2>
-    <ul>
-      <li>Thanh Dang, Melih Barsbey, <strong>A K M Rokonuzzaman Sonet</strong>, Mert Gurbuzbalaban, Umut Simsekli, &amp; Lingjiong Zhu (2025).
-        <em>Algorithmic Stability of Stochastic Gradient Descent with Momentum under Heavy-Tailed Noise</em>.
-        <a href="https://arxiv.org/abs/2502.00885" target="_blank" rel="noopener">arXiv:2502.00885</a>
-      </li>
-      
-    </ul>
-  </div>
+        <div class="nav-right">
 
-  <!-- PRESENTATIONS -->
-  <div class="card">
-    <h2>Presentations</h2>
-    <ul>
-      <li>“Applied Quantitative Finance: A Project Portfolio”, Quant Finance Boot Camp, Erdős Institute (June 2025). Topics: Portfolio Optimization, Delta Hedging, Option Pricing. 
-       <a href="QF_Slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a> 
-      </li>
-      <li>“Stock Price Prediction using LSTM”, Data Science Boot Camp, Erdős Institute (June 2022).
-        <a href="STP_LSTM_slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
-      </li>
-      <li>“Study of Some Basic Epidemiological Models”, Dept. of Mathematics, University of Dhaka (Dec 2018).
-      </li>
-    </ul>
-    
-  </div>
+          <div class="links">
 
-  <!-- AWARDS -->
-  <div class="card">
-    <h2>Awards</h2>
-    <ul>
-      <li>Dwight B. Goodner Mathematics Fellowship, senior award for outstanding teaching in the field of Mathematics (2026)</li>
-      <li>FSU Math Distinguished Teaching Assistant Award, an award for outstanding TA performance (2025)</li>
-      <li>Bettye Anne Busbee Case Graduate Fellowship — FSU Mathematics (2024)</li>
-      <li>University Scholarship — University of Dhaka, based on outstanding undergraduate result (2019)</li>
-      <li>Duke of Edinburgh’s Award: Bronze Level, a global youth achievement award for individuals, (2018)</li>
-      <li>Champion, Intra-Department Mathematics Contest (MathCon) — University of Dhaka (2015)</li>
-    </ul>
-  </div>
+            <a href="./">Home</a>
 
-  <!-- PROFESSIONAL MEMBERSHIPS -->
-  <div class="card">
-    <h2>Professional Memberships</h2>
-    <ul>
-      <li>American Mathematical Society (AMS)</li>
-      <li>Society for Industrial and Applied Mathematics (SIAM)</li>
-      <li>Bangladesh Mathematical Society (BMS)</li>
-    </ul>
-  </div>
+            <a href="research.html">Research</a>
 
-</main>
+            <a href="teaching.html">Teaching</a>
+
+            <a href="projects.html">Projects</a>
+
+            <a class="active"
+               href="cv.html"
+               aria-current="page">
+              CV
+            </a>
+
+            <a href="./#contact">Contact</a>
+
+          </div>
+
+          <button id="theme-toggle"
+                  aria-label="Toggle light and dark mode"
+                  title="Toggle theme">
+            🌙
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ========================================
+       MAIN CONTENT
+  ========================================= -->
+
+  <main class="page-content">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="page-heading">
+
+      <h1>Curriculum Vitae</h1>
+
+      <p class="name">
+        A K M Rokonuzzaman Sonet
+      </p>
+
+      <p class="designation">
+        Visiting Assistant Professor of Mathematics
+      </p>
+
+      <p class="subtitle">
+        Department of Mathematics,
+        Florida A&amp;M University
+      </p>
+
+      <p class="subtitle">
+        Ph.D. in Financial Mathematics,
+        Florida State University, 2026
+      </p>
+
+
+      <!-- CV DOWNLOAD AND VIEW BUTTONS -->
+
+      <div class="cv-actions">
+
+        <a class="cv-button"
+           href="Curriculum_Vitae_SONET.pdf"
+           download>
+          ↓ Download CV (PDF)
+        </a>
+
+        <a class="outline-button"
+           href="Curriculum_Vitae_SONET.pdf"
+           target="_blank"
+           rel="noopener">
+          View CV (PDF)
+        </a>
+
+      </div>
+
+
+      <!-- ACADEMIC LINKS -->
+
+      <div class="academic-links">
+
+        <a href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener">
+          Google Scholar
+        </a>
+
+        <a href="https://github.com/Sonet1123"
+           target="_blank"
+           rel="noopener">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/sonet45/"
+           target="_blank"
+           rel="noopener">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================================
+         QUICK SECTION NAVIGATION
+    ========================================= -->
+
+    <div class="section-nav">
+
+      <a href="#education">Education</a>
+
+      <a href="#experience">Experience</a>
+
+      <a href="#interests">Research Interests</a>
+
+      <a href="#publications">Publications</a>
+
+      <a href="#mentoring">Mentoring</a>
+
+      <a href="#presentations">Presentations</a>
+
+      <a href="#awards">Awards</a>
+
+      <a href="#memberships">Memberships</a>
+
+    </div>
+
+
+    <!-- ========================================
+         EDUCATION
+    ========================================= -->
+
+    <section class="cv-section" id="education">
+
+      <h2>Education</h2>
+
+      <div class="cv-entry">
+
+        <div class="date">
+          2020–2026
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Ph.D. in Financial Mathematics</h3>
+
+          <p class="institution">
+            Florida State University, USA
+          </p>
+
+          <p class="description">
+            <strong>Dissertation:</strong>
+            <em>
+              Algorithmic Stability of Heavy-Tailed
+              Stochastic Gradient Algorithms
+            </em>
+          </p>
+
+          <p class="description">
+            <strong>Advisor:</strong>
+            Dr. Lingjiong Zhu
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">
+          2020–2022
+        </div>
+
+        <div class="entry-content">
+
+          <h3>M.S. in Financial Mathematics</h3>
+
+          <p class="institution">
+            Florida State University, USA
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">
+          2015–2019
+        </div>
+
+        <div class="entry-content">
+
+          <h3>B.S. in Mathematics</h3>
+
+          <p class="institution">
+            University of Dhaka, Bangladesh
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         ACADEMIC AND PROFESSIONAL EXPERIENCE
+    ========================================= -->
+
+    <section class="cv-section" id="experience">
+
+      <h2>Academic &amp; Professional Experience</h2>
+
+
+      <!-- CURRENT POSITION -->
+
+      <div class="current-position">
+
+        <h3>
+          Visiting Assistant Professor of Mathematics
+        </h3>
+
+        <p class="institution">
+          Department of Mathematics,
+          Florida A&amp;M University
+        </p>
+
+        <p class="date">
+          August 2026 – Present
+        </p>
+
+        <p class="description">
+          Courses: Calculus I (MAC 2311)
+          and College Algebra (MAC 1105C).
+        </p>
+
+        <p class="description">
+          Responsibilities include undergraduate
+          instruction, course preparation, student
+          assessment, academic support, and
+          undergraduate research mentoring.
+        </p>
+
+        <a class="resource-link"
+           href="teaching.html">
+          Teaching Experience
+        </a>
+
+      </div>
+
+
+      <!-- INSTRUCTOR OF RECORD -->
+
+      <div class="cv-entry">
+
+        <div class="date">
+          2022–2026
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Instructor of Record</h3>
+
+          <p class="institution">
+            Department of Mathematics,
+            Florida State University
+          </p>
+
+          <p class="description">
+            Courses: Calculus and Analytic Geometry I–III
+            and Precalculus Algebra.
+          </p>
+
+          <p class="description">
+            Responsibilities: syllabus design,
+            lecture preparation, classroom instruction,
+            assessment, and student support.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- GRADUATE RESEARCH ASSISTANT -->
+
+      <div class="cv-entry">
+
+        <div class="date">
+          Summers 2023 &amp; 2025
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Graduate Research Assistant</h3>
+
+          <p class="institution">
+            Florida State University
+          </p>
+
+          <p class="description">
+            <strong>Project:</strong>
+            The Heavy-Tail Methods in Machine Learning
+          </p>
+
+          <p class="description">
+            <strong>Supervisor:</strong>
+            Dr. Lingjiong Zhu
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- COURSE DEVELOPMENT -->
+
+      <div class="cv-entry">
+
+        <div class="date">
+          Summer 2024
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Course Development Assistant — Calculus I</h3>
+
+          <p class="institution">
+            Florida State University
+          </p>
+
+          <p class="description">
+            Development of instructional materials
+            and assessments aligned with course
+            learning outcomes.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- RECITATION INSTRUCTOR -->
+
+      <div class="cv-entry">
+
+        <div class="date">
+          2022–2023
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Recitation Instructor</h3>
+
+          <p class="institution">
+            Department of Mathematics,
+            Florida State University
+          </p>
+
+          <p class="description">
+            Courses: Discrete Mathematics I,
+            Discrete Mathematics II, and Calculus I.
+          </p>
+
+          <p class="description">
+            Responsibilities: problem-solving sessions,
+            student support, assessment, and coordination
+            with course instructors.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- GRADUATE TEACHING ASSISTANT -->
+
+      <div class="cv-entry">
+
+        <div class="date">
+          Jan–Dec 2021
+        </div>
+
+        <div class="entry-content">
+
+          <h3>Graduate Teaching Assistant</h3>
+
+          <p class="institution">
+            Florida State University
+          </p>
+
+          <p class="description">
+            Assisted with undergraduate mathematics
+            courses, grading, discussions, and
+            office hours.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         RESEARCH INTERESTS
+    ========================================= -->
+
+    <section class="cv-section" id="interests">
+
+      <h2>Research Interests</h2>
+
+      <ul class="standard-list">
+
+        <li>
+          Stochastic Optimization and Machine Learning Theory
+        </li>
+
+        <li>
+          Algorithmic Stability and Generalization
+        </li>
+
+        <li>
+          Applied Probability and Stochastic Processes
+        </li>
+
+        <li>
+          Data Science and Scientific Machine Learning
+        </li>
+
+        <li>
+          Computational Finance and Derivatives Pricing
+        </li>
+
+        <li>
+          Financial Mathematics and Risk Management
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ========================================
+         PUBLICATIONS AND PREPRINTS
+    ========================================= -->
+
+    <section class="cv-section" id="publications">
+
+      <h2>Publications &amp; Preprints</h2>
+
+      <div class="publication">
+
+        <p class="paper-title">
+
+          Algorithmic Stability of Stochastic
+          Gradient Descent with Momentum under
+          Heavy-Tailed Noise
+
+        </p>
+
+        <p>
+
+          Thanh Dang, Melih Barsbey,
+          <strong>A K M Rokonuzzaman Sonet</strong>,
+          Mert Gurbuzbalaban, Umut Simsekli,
+          and Lingjiong Zhu.
+
+        </p>
+
+        <p class="small">
+          2025 | arXiv:2502.00885
+        </p>
+
+        <p class="paper-status">
+          Major revision — Mathematics of Operations Research
+        </p>
+
+        <a class="resource-link"
+           href="https://arxiv.org/abs/2502.00885"
+           target="_blank"
+           rel="noopener">
+          arXiv
+        </a>
+
+        <a class="resource-link"
+           href="https://arxiv.org/pdf/2502.00885"
+           target="_blank"
+           rel="noopener">
+          PDF
+        </a>
+
+      </div>
+
+      <p>
+
+        <a href="research.html">
+          View research projects and ongoing work →
+        </a>
+
+      </p>
+
+    </section>
+
+
+    <!-- ========================================
+         UNDERGRADUATE RESEARCH SUPERVISION
+    ========================================= -->
+
+    <section class="cv-section" id="mentoring">
+
+      <h2>Undergraduate Research Supervision</h2>
+
+      <div class="cv-entry">
+
+        <div class="date">
+          Fall 2026
+        </div>
+
+        <div class="entry-content">
+
+          <h3>
+            Asset–Liability Management and Duration Matching
+          </h3>
+
+          <p class="institution">
+            Florida A&amp;M University
+          </p>
+
+          <p class="description">
+            Supervising an undergraduate research
+            project in financial mathematics,
+            focusing on asset–liability management,
+            bond duration, interest rate risk,
+            and portfolio immunization strategies.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         PRESENTATIONS
+    ========================================= -->
+
+    <section class="cv-section" id="presentations">
+
+      <h2>Presentations</h2>
+
+
+      <div class="cv-entry">
+
+        <div class="date">
+          June 2025
+        </div>
+
+        <div class="entry-content">
+
+          <h3>
+            Applied Quantitative Finance:
+            A Project Portfolio
+          </h3>
+
+          <p class="institution">
+            Quant Finance Boot Camp,
+            Erdős Institute
+          </p>
+
+          <p class="description">
+            Portfolio Optimization, Delta Hedging,
+            and Option Pricing.
+          </p>
+
+          <a class="resource-link"
+             href="QF_Slides.pdf"
+             target="_blank"
+             rel="noopener">
+            Slides (PDF)
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">
+          June 2022
+        </div>
+
+        <div class="entry-content">
+
+          <h3>
+            Stock Price Prediction using LSTM
+          </h3>
+
+          <p class="institution">
+            Data Science Boot Camp,
+            Erdős Institute
+          </p>
+
+          <a class="resource-link"
+             href="STP_LSTM_slides.pdf"
+             target="_blank"
+             rel="noopener">
+            Slides (PDF)
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">
+          December 2018
+        </div>
+
+        <div class="entry-content">
+
+          <h3>
+            Study of Some Basic Epidemiological Models
+          </h3>
+
+          <p class="institution">
+            Department of Mathematics,
+            University of Dhaka
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         AWARDS AND HONORS
+    ========================================= -->
+
+    <section class="cv-section" id="awards">
+
+      <h2>Awards &amp; Honors</h2>
+
+
+      <div class="cv-entry">
+
+        <div class="date">2026</div>
+
+        <div class="entry-content">
+
+          <h3>
+            Dwight B. Goodner Mathematics Fellowship
+          </h3>
+
+          <p class="institution">
+            Florida State University
+          </p>
+
+          <p class="description">
+            Senior award for outstanding teaching
+            in the field of mathematics.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">2025</div>
+
+        <div class="entry-content">
+
+          <h3>
+            FSU Math Distinguished Teaching Assistant Award
+          </h3>
+
+          <p class="institution">
+            Florida State University
+          </p>
+
+          <p class="description">
+            Recognition for outstanding teaching
+            assistant performance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">2024</div>
+
+        <div class="entry-content">
+
+          <h3>
+            Bettye Anne Busbee Case Graduate Fellowship
+          </h3>
+
+          <p class="institution">
+            Department of Mathematics,
+            Florida State University
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">2019</div>
+
+        <div class="entry-content">
+
+          <h3>University Scholarship</h3>
+
+          <p class="institution">
+            University of Dhaka
+          </p>
+
+          <p class="description">
+            Awarded based on outstanding
+            undergraduate academic performance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">2018</div>
+
+        <div class="entry-content">
+
+          <h3>
+            Duke of Edinburgh’s Award — Bronze Level
+          </h3>
+
+          <p class="description">
+            International youth achievement award.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cv-entry">
+
+        <div class="date">2015</div>
+
+        <div class="entry-content">
+
+          <h3>
+            Champion, Intra-Department Mathematics
+            Contest (MathCon)
+          </h3>
+
+          <p class="institution">
+            University of Dhaka
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         PROFESSIONAL MEMBERSHIPS
+    ========================================= -->
+
+    <section class="cv-section" id="memberships">
+
+      <h2>Professional Memberships</h2>
+
+      <ul class="standard-list">
+
+        <li>
+          American Mathematical Society (AMS)
+        </li>
+
+        <li>
+          Society for Industrial and Applied Mathematics
+          (SIAM)
+        </li>
+
+        <li>
+          Bangladesh Mathematical Society (BMS)
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- ========================================
+         BOTTOM CV DOWNLOAD BUTTON
+    ========================================= -->
+
+    <div class="cv-actions">
+
+      <a class="cv-button"
+         href="Curriculum_Vitae_SONET.pdf"
+         download>
+        ↓ Download Full Curriculum Vitae
+      </a>
+
+      <a class="outline-button" href="#">
+        ↑ Back to Top
+      </a>
+
+    </div>
+
+
+  </main>
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span>
+      A K M Rokonuzzaman Sonet.
+
+      <br>
+
+      Built with GitHub Pages.
+
+    </div>
+
+  </footer>
+
+
+  <!-- ========================================
+       JAVASCRIPT
+  ========================================= -->
+
+  <script>
+
+    // Automatically update the copyright year.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Synchronize dark mode across all pages.
+
+    const themeButton =
+      document.getElementById("theme-toggle");
+
+    const themeKey = "prefers-theme";
+
+    function updateThemeButton() {
+
+      const dark =
+        document.documentElement.classList.contains("dark");
+
+      themeButton.textContent = dark ? "☀️" : "🌙";
+
+    }
+
+    if (localStorage.getItem(themeKey) === "dark") {
+
+      document.documentElement.classList.add("dark");
+
+    }
+
+    updateThemeButton();
+
+    themeButton.addEventListener("click", function () {
+
+      const dark =
+        document.documentElement.classList.toggle("dark");
+
+      localStorage.setItem(
+        themeKey,
+        dark ? "dark" : "light"
+      );
+
+      updateThemeButton();
+
+    });
+
+  </script>
+
 </body>
 </html>
