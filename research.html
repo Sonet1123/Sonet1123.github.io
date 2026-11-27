@@ -1,84 +1,1267 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Research — A K M Rokonuzzaman Sonet</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#ffffff;
-  --card:#f9f9f9;
-  --text:#111111;
-  --muted:#555555;
-  --brand:#003366;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-main{max-width:900px;margin:0 auto;padding:28px}
-h1{font-size:40px;margin:0 0 4px;font-weight:800}
-.sub{color:var(--muted);margin:0 0 12px}
-h2{margin-top:32px;margin-bottom:12px;font-size:24px}
-.card{background:var(--card);border:1px solid #ddd;border-radius:12px;padding:20px;margin:16px 0}
-ul{margin:0;padding-left:18px}
-.badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
-.topnav{margin:8px 0 20px}
-</style>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>Research — A K M Rokonuzzaman Sonet</title>
+
+  <meta name="description"
+        content="Research of A K M Rokonuzzaman Sonet in stochastic optimization, applied probability, machine learning theory, data assimilation, and financial mathematics.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    /* ========================================
+       COLOR SETTINGS
+    ======================================== */
+
+    :root {
+      --bg: #ffffff;
+      --card: #f8faf9;
+      --text: #222222;
+      --muted: #60666b;
+      --brand: #174b36;
+      --accent: #e67e22;
+      --border: #dfe5e1;
+    }
+
+    html.dark {
+      --bg: #101412;
+      --card: #191f1c;
+      --text: #e8eaed;
+      --muted: #a9b0b6;
+      --brand: #8bc7a4;
+      --accent: #f2a65a;
+      --border: #303a34;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 22px 28px;
+    }
+
+
+    /* ========================================
+       NAVIGATION BAR
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 2px solid var(--brand);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--brand);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .links a.active {
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    #theme-toggle {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+
+    /* ========================================
+       MAIN PAGE AND HEADINGS
+    ======================================== */
+
+    .page-content {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 45px 28px;
+    }
+
+    .page-heading {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      color: var(--brand);
+      font-size: 25px;
+      font-weight: 600;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+
+    .designation {
+      color: var(--brand);
+      font-weight: 600;
+      font-size: 16px;
+      margin: 4px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .research-section {
+      margin-bottom: 35px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 110px;
+    }
+
+    .research-section:last-child {
+      border-bottom: none;
+    }
+
+
+    /* ========================================
+       SECTION NAVIGATION
+    ======================================== */
+
+    .section-nav {
+      display: flex;
+      gap: 10px 18px;
+      flex-wrap: wrap;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 15px 18px;
+      margin-bottom: 35px;
+      font-size: 13px;
+    }
+
+    .section-nav a {
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       RESEARCH OVERVIEW
+    ======================================== */
+
+    .overview p {
+      margin: 12px 0;
+    }
+
+    .academic-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       RESEARCH INTERESTS
+    ======================================== */
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .interest-tag {
+      display: inline-block;
+      background: var(--card);
+      color: var(--brand);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       PUBLICATIONS
+    ======================================== */
+
+    .publication {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 22px 24px;
+      margin: 18px 0;
+    }
+
+    .publication p {
+      margin: 8px 0;
+    }
+
+    .paper-title {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0 0 10px;
+    }
+
+    .authors {
+      font-size: 14px;
+    }
+
+    .paper-status {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .resource-link {
+      display: inline-block;
+      color: var(--brand);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 5px 12px;
+      margin: 8px 6px 0 0;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .resource-link:hover {
+      border-color: var(--brand);
+      text-decoration: none;
+    }
+
+
+    /* ========================================
+       RESEARCH PROJECTS
+    ======================================== */
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .project-card h3 {
+      color: var(--brand);
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .project-category {
+      color: var(--muted);
+      font-size: 12px !important;
+      font-weight: 500;
+    }
+
+    .project-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .keyword {
+      color: var(--muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 11px;
+    }
+
+
+    /* ========================================
+       DISSERTATION AND MENTORING
+    ======================================== */
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 15px 0;
+    }
+
+    .info-card p {
+      margin: 8px 0;
+    }
+
+    .info-card h3 {
+      line-height: 1.5;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 15px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+
+    /* ========================================
+       MOBILE RESPONSIVENESS
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .links {
+        gap: 14px;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 18px 20px;
+      }
+
+      header {
+        position: static;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .links a {
+        font-size: 13px;
+      }
+
+      .page-content {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .publication,
+      .project-card,
+      .info-card {
+        padding: 16px;
+      }
+
+      .research-section {
+        scroll-margin-top: 20px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-<main>
-  <h1>Research</h1>
-  <p class="sub">A K M Rokonuzzaman Sonet — Ph.D. in Financial Mathematics, Florida State University</p>
-  <div class="topnav">
-    <a class="badge" href="./">← Home</a>
-  </div>
 
-  <!-- OVERVIEW -->
-  <div class="card">
-    <h2>Overview</h2>
-    <p>
-      I earned my Ph.D. in Financial Mathematics from Florida State University, working under the supervision of 
-      <a href="https://www.math.fsu.edu/DepartmentNews/Articles/Fac_Zhu.math" target="_blank" rel="noopener">Dr. Lingjiong Zhu</a>. 
-      My research focuses on algorithmic stability and generalization of heavy-tailed stochastic gradient algorithms, particularly Stochastic Gradient Descent with momentum (SGDm).
-      I am also interested in emergence of heavy tails in SGDm and decentralized stochastic gradient descent (DE-SGD) methods. 
-    </p>
-  </div>
+  <!-- ========================================
+       NAVIGATION BAR
+  ========================================= -->
 
-  <!-- RESEARCH INTERESTS -->
-  <div class="card">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Stochastic Optimization and Machine Learning Theory</li>
-      <li>Algorithmic Stability and Generalization</li>
-      <li>Data Science</li>
-      <li>Computational Finance and Derivatives Pricing</li>
-      <li>Financial Risk Management</li>
-    </ul>
-  </div>
+  <header>
 
-  <!-- CURRENT RESEARCH -->
-  <div class="card">
-    <h2>Current Research Projects</h2>
-    <ul>
-      <li>Heavy-tailed Dynamics in Stochastic Gradient Descent with Momentum (SGDm) — analyzing tail indices and stability properties.</li>
-      <li>Decentralized SGD — investigating heavy-tail emergence in the homogenized version and the effect of network geometry on optimization dynamics.</li>
-      
-    </ul>
-  </div>
+    <div class="container">
 
-  <!-- PUBLICATIONS -->
-  <div class="card">
-    <h2>Publications & Preprints</h2>
-    <ul>
-      <li>Thanh Dang, Melih Barsbey, <strong>A K M Rokonuzzaman Sonet</strong>, Mert Gurbuzbalaban, Umut Simsekli, &amp; Lingjiong Zhu (2025).
-        <em>Algorithmic Stability of Stochastic Gradient Descent with Momentum under Heavy-Tailed Noise</em>.
-        <a href="https://arxiv.org/abs/2502.00885" target="_blank" rel="noopener">arXiv:2502.00885</a>
-      </li>
-    </ul>
-  </div>
-</main>
+      <nav>
+
+        <a class="brand" href="./">
+          A K M R Sonet
+        </a>
+
+        <div class="nav-right">
+
+          <div class="links">
+
+            <a href="./">Home</a>
+
+            <a class="active"
+               href="research.html"
+               aria-current="page">
+              Research
+            </a>
+
+            <a href="teaching.html">Teaching</a>
+
+            <a href="projects.html">Projects</a>
+
+            <a href="cv.html">CV</a>
+
+            <a href="./#contact">Contact</a>
+
+          </div>
+
+          <button id="theme-toggle"
+                  aria-label="Toggle light and dark mode"
+                  title="Toggle theme">
+            🌙
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ========================================
+       MAIN CONTENT
+  ========================================= -->
+
+  <main class="page-content">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="page-heading">
+
+      <h1>Research</h1>
+
+      <p class="designation">
+        Visiting Assistant Professor of Mathematics
+      </p>
+
+      <p class="subtitle">
+        A K M Rokonuzzaman Sonet
+      </p>
+
+      <p class="subtitle">
+        Department of Mathematics,
+        Florida A&amp;M University
+      </p>
+
+      <div class="academic-links">
+
+        <a href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener">
+          Google Scholar
+        </a>
+
+        <a href="https://github.com/Sonet1123"
+           target="_blank"
+           rel="noopener">
+          GitHub
+        </a>
+
+        <a href="Curriculum_Vitae_SONET.pdf"
+           target="_blank"
+           rel="noopener">
+          Curriculum Vitae (PDF)
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================================
+         QUICK SECTION NAVIGATION
+    ========================================= -->
+
+    <div class="section-nav">
+
+      <a href="#overview">Overview</a>
+
+      <a href="#interests">Research Interests</a>
+
+      <a href="#publications">Publications</a>
+
+      <a href="#current-research">Current Research</a>
+
+      <a href="#dissertation">Dissertation</a>
+
+      <a href="#mentoring">Research Mentoring</a>
+
+    </div>
+
+
+    <!-- ========================================
+         RESEARCH OVERVIEW
+    ========================================= -->
+
+    <section class="research-section overview"
+             id="overview">
+
+      <h2>Research Overview</h2>
+
+      <p>
+
+        My research lies at the intersection of
+        probability theory, stochastic optimization, machine
+        learning theory, and computational mathematics.
+
+        I am particularly interested in understanding
+        the mathematical foundations of stochastic
+        learning algorithms, with an emphasis on
+        algorithmic stability, generalization, and
+        heavy-tailed phenomena.
+
+      </p>
+
+      <p>
+
+        I earned my Ph.D. in Financial Mathematics
+        from Florida State University under the
+        supervision of
+
+        <a href="https://www.math.fsu.edu/DepartmentNews/Articles/Fac_Zhu.math"
+           target="_blank"
+           rel="noopener">
+          Dr. Lingjiong Zhu
+        </a>.
+
+        My doctoral research focused on the algorithmic
+        stability and generalization of heavy-tailed
+        stochastic gradient algorithms, particularly
+        stochastic gradient descent with momentum
+        (SGDm).
+
+      </p>
+
+      <p>
+
+        My broader research interests include
+        stochastic differential equations,
+        decentralized optimization, stochastic
+        sampling methods, scientific machine
+        learning, data assimilation, and applications
+        of mathematics to financial modeling and
+        risk management.
+
+      </p>
+
+    </section>
+
+
+    <!-- ========================================
+         RESEARCH INTERESTS
+    ========================================= -->
+
+    <section class="research-section"
+             id="interests">
+
+      <h2>Research Interests</h2>
+
+      <div class="interest-list">
+
+        <span class="interest-tag">
+          Stochastic Optimization
+        </span>
+
+        <span class="interest-tag">
+          Machine Learning Theory
+        </span>
+
+        <span class="interest-tag">
+          Algorithmic Stability and Generalization
+        </span>
+
+        <span class="interest-tag">
+          Probability Theory
+        </span>
+
+        <span class="interest-tag">
+          Heavy-Tailed Stochastic Dynamics
+        </span>
+
+        <span class="interest-tag">
+          Stochastic Differential Equations
+        </span>
+
+        <span class="interest-tag">
+          Scientific Machine Learning
+        </span>
+
+        <span class="interest-tag">
+          Data Assimilation
+        </span>
+
+        <span class="interest-tag">
+          Data Science
+        </span>
+
+        <span class="interest-tag">
+          Computational Finance
+        </span>
+
+        <span class="interest-tag">
+          Derivatives Pricing
+        </span>
+
+        <span class="interest-tag">
+          Financial Risk Management
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         PUBLICATIONS AND PREPRINTS
+    ========================================= -->
+
+    <section class="research-section"
+             id="publications">
+
+      <h2>Publications &amp; Preprints</h2>
+
+
+      <!-- ADD NEW PUBLICATIONS HERE -->
+
+
+      <!-- PUBLICATION 1 -->
+
+      <div class="publication">
+
+        <h3 class="paper-title">
+
+          Algorithmic Stability of Stochastic
+          Gradient Descent with Momentum under
+          Heavy-Tailed Noise
+
+        </h3>
+
+        <p class="authors">
+
+          Thanh Dang, Melih Barsbey,
+          <strong>A K M Rokonuzzaman Sonet</strong>,
+          Mert Gurbuzbalaban, Umut Simsekli,
+          and Lingjiong Zhu.
+
+        </p>
+
+        <p class="small">
+
+          2025 | arXiv:2502.00885
+
+        </p>
+
+        <p class="paper-status">
+
+          Major revision — Mathematics of Operations Research
+
+        </p>
+
+        <p>
+
+          This work investigates the algorithmic
+          stability of stochastic gradient descent
+          with momentum in the presence of heavy-tailed
+          noise, with particular emphasis on the
+          relationship between stochastic dynamics,
+          stability, and generalization.
+
+        </p>
+
+        <a class="resource-link"
+           href="https://arxiv.org/abs/2502.00885"
+           target="_blank"
+           rel="noopener">
+          arXiv
+        </a>
+
+        <a class="resource-link"
+           href="https://arxiv.org/pdf/2502.00885"
+           target="_blank"
+           rel="noopener">
+          PDF
+        </a>
+
+      </div>
+
+
+      <p class="small">
+
+        For additional information, please visit my
+
+        <a href="https://scholar.google.com/citations?user=5hOKR-YAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener">
+          Google Scholar profile
+        </a>.
+
+      </p>
+
+    </section>
+
+
+    <!-- ========================================
+         CURRENT RESEARCH PROJECTS
+    ========================================= -->
+
+    <section class="research-section"
+             id="current-research">
+
+      <h2>Current Research Projects</h2>
+
+
+      <!-- PROJECT 1 -->
+
+      <div class="project-card">
+
+        <h3>
+
+          Heavy-Tailed Dynamics in Stochastic
+          Gradient Descent with Momentum
+
+        </h3>
+
+        <p class="project-category">
+
+          Stochastic Optimization | Machine Learning Theory
+
+        </p>
+
+        <p>
+
+          Investigating the emergence of heavy-tailed
+          behavior in stochastic gradient descent
+          with momentum, with an emphasis on tail
+          indices, stochastic dynamics, algorithmic
+          stability, and generalization properties.
+
+        </p>
+
+        <div class="project-keywords">
+
+          <span class="keyword">SGDm</span>
+
+          <span class="keyword">Heavy Tails</span>
+
+          <span class="keyword">Algorithmic Stability</span>
+
+          <span class="keyword">Generalization</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 2 -->
+
+      <div class="project-card">
+
+        <h3>
+
+          Heavy-Tailed Dynamics in Decentralized
+          Stochastic Gradient Descent
+
+        </h3>
+
+        <p class="project-category">
+
+          Distributed Optimization | Applied Probability
+
+        </p>
+
+        <p>
+
+          Studying the emergence of heavy-tailed
+          behavior in decentralized stochastic
+          gradient descent algorithms, particularly
+          through homogenized stochastic models.
+
+          This research explores how network geometry
+          and communication structures influence
+          stochastic optimization dynamics and
+          heavy-tailed phenomena.
+
+        </p>
+
+        <div class="project-keywords">
+
+          <span class="keyword">DE-SGD</span>
+
+          <span class="keyword">Network Geometry</span>
+
+          <span class="keyword">Homogenization</span>
+
+          <span class="keyword">Heavy Tails</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 3 -->
+
+      <div class="project-card">
+
+        <h3>
+
+          Penalized Fractional Underdamped
+          Langevin Dynamics
+
+        </h3>
+
+        <p class="project-category">
+
+          Stochastic Dynamics | Sampling and Optimization
+
+        </p>
+
+        <p>
+
+          Investigating penalized fractional
+          underdamped Langevin dynamics and their
+          potential applications to constrained
+          stochastic sampling and optimization.
+
+          The project explores the interplay between
+          heavy-tailed stochastic noise, momentum,
+          and penalization mechanisms.
+
+        </p>
+
+        <div class="project-keywords">
+
+          <span class="keyword">Langevin Dynamics</span>
+
+          <span class="keyword">Fractional Noise</span>
+
+          <span class="keyword">Penalization</span>
+
+          <span class="keyword">Stochastic Sampling</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 4 -->
+
+      <div class="project-card">
+
+        <h3>
+
+          Transformer-Based Data Assimilation
+          and State Reconstruction
+
+        </h3>
+
+        <p class="project-category">
+
+          Scientific Machine Learning | Data Assimilation
+
+        </p>
+
+        <p>
+
+          Developing and investigating machine
+          learning-assisted data assimilation
+          methods for high-dimensional nonlinear
+          dynamical systems under sparse and noisy
+          observations.
+
+        </p>
+
+        <p>
+
+          This research combines Transformer-based
+          architectures, including Vision Transformers
+          (ViTs), with ensemble score filters (EnSF)
+          to study state reconstruction and sequential
+          data assimilation.
+
+          Numerical experiments include the Lorenz-96
+          model and the Surface Quasi-Geostrophic
+          (SQG) model.
+
+        </p>
+
+        <div class="project-keywords">
+
+          <span class="keyword">Transformers</span>
+
+          <span class="keyword">Vision Transformers</span>
+
+          <span class="keyword">EnSF</span>
+
+          <span class="keyword">Data Assimilation</span>
+
+          <span class="keyword">Lorenz-96</span>
+
+          <span class="keyword">SQG</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ADD NEW RESEARCH PROJECTS HERE -->
+
+
+    </section>
+
+
+    <!-- ========================================
+         DOCTORAL DISSERTATION
+    ========================================= -->
+
+    <section class="research-section"
+             id="dissertation">
+
+      <h2>Doctoral Dissertation</h2>
+
+      <div class="info-card">
+
+        <h3>
+
+          Algorithmic Stability of Heavy-Tailed
+          Stochastic Gradient Algorithms
+
+        </h3>
+
+        <p class="muted">
+
+          Ph.D. in Financial Mathematics |
+          Florida State University | 2026
+
+        </p>
+
+        <p>
+
+          <strong>Dissertation Advisor:</strong>
+
+          <a href="https://www.math.fsu.edu/DepartmentNews/Articles/Fac_Zhu.math"
+             target="_blank"
+             rel="noopener">
+            Dr. Lingjiong Zhu
+          </a>
+
+        </p>
+
+        <p>
+
+          My dissertation investigates mathematical
+          questions concerning the algorithmic
+          stability of stochastic gradient algorithms
+          under heavy-tailed noise, connecting
+          stochastic optimization, applied probability,
+          and statistical learning theory.
+
+        </p>
+
+
+        <!--
+        Uncomment the following link after uploading
+        your dissertation PDF.
+
+        <a class="resource-link"
+           href="Dissertation_SONET.pdf"
+           target="_blank"
+           rel="noopener">
+          Dissertation (PDF)
+        </a>
+        -->
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         UNDERGRADUATE RESEARCH SUPERVISION
+    ========================================= -->
+
+    <section class="research-section"
+             id="mentoring">
+
+      <h2>Undergraduate Research Supervision</h2>
+
+      <p>
+
+        I am interested in involving undergraduate
+        students in research projects that combine
+        mathematical modeling, computational methods,
+        data analysis, and real-world applications.
+
+      </p>
+
+
+      <!-- UNDERGRADUATE PROJECT 1 -->
+
+      <div class="project-card">
+
+        <h3>
+
+          Asset–Liability Management and Duration Matching
+
+        </h3>
+
+        <p class="project-category">
+
+          Florida A&amp;M University | Fall 2026
+
+        </p>
+
+        <p>
+
+          Supervising an undergraduate research
+          project in financial mathematics and
+          actuarial science, focusing on asset–liability
+          management, bond valuation, duration matching,
+          interest rate risk, and portfolio immunization.
+
+        </p>
+
+        <p>
+
+          The project integrates mathematical modeling
+          and computational experiments to investigate
+          the sensitivity of assets and liabilities
+          to changes in interest rates.
+
+        </p>
+
+        <div class="project-keywords">
+
+          <span class="keyword">Actuarial Science</span>
+
+          <span class="keyword">Financial Mathematics</span>
+
+          <span class="keyword">Duration Matching</span>
+
+          <span class="keyword">Risk Management</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ADD FUTURE UNDERGRADUATE PROJECTS HERE -->
+
+
+    </section>
+
+
+    <!-- ========================================
+         COMPUTATIONAL PROJECTS
+    ========================================= -->
+
+    <section class="research-section">
+
+      <h2>Computational &amp; Applied Projects</h2>
+
+      <p>
+
+        In addition to my theoretical research,
+        I have worked on computational projects
+        in financial mathematics, machine learning,
+        quantitative finance, and data science.
+
+      </p>
+
+      <a class="resource-link"
+         href="projects.html">
+        View Computational Projects →
+      </a>
+
+      <a class="resource-link"
+         href="https://github.com/Sonet1123"
+         target="_blank"
+         rel="noopener">
+        GitHub
+      </a>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span>
+      A K M Rokonuzzaman Sonet.
+
+      <br>
+
+      Built with GitHub Pages.
+
+    </div>
+
+  </footer>
+
+
+  <!-- ========================================
+       JAVASCRIPT
+  ========================================= -->
+
+  <script>
+
+    // Automatically update the copyright year.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Synchronize light and dark mode
+    // across all website pages.
+
+    const themeButton =
+      document.getElementById("theme-toggle");
+
+    const themeKey = "prefers-theme";
+
+    function updateThemeButton() {
+
+      const dark =
+        document.documentElement.classList.contains("dark");
+
+      themeButton.textContent = dark ? "☀️" : "🌙";
+
+    }
+
+    if (localStorage.getItem(themeKey) === "dark") {
+
+      document.documentElement.classList.add("dark");
+
+    }
+
+    updateThemeButton();
+
+    themeButton.addEventListener("click", function () {
+
+      const dark =
+        document.documentElement.classList.toggle("dark");
+
+      localStorage.setItem(
+        themeKey,
+        dark ? "dark" : "light"
+      );
+
+      updateThemeButton();
+
+    });
+
+  </script>
+
 </body>
 </html>
