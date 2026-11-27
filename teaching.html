@@ -1,59 +1,956 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Teaching — A K M Rokonuzzaman Sonet</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#ffffff;
-  --card:#f9f9f9;
-  --text:#111111;
-  --muted:#555555;
-  --brand:#003366;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-main{max-width:900px;margin:0 auto;padding:28px}
-h1{font-size:40px;margin:0 0 4px;font-weight:800}
-.sub{color:var(--muted);margin:0 0 12px}
-h2{margin-top:28px;margin-bottom:12px;font-size:24px}
-.card{background:var(--card);border:1px solid #ddd;border-radius:12px;padding:20px;margin:16px 0}
-ul{margin:0;padding-left:18px}
-.badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid #bbb;display:inline-block;background:#fff}
-.topnav{margin:8px 0 20px}
-</style>
-</head>
-<body>
-<main>
-  <h1>Teaching</h1>
-  <p class="sub">A K M Rokonuzzaman Sonet — Ph.D. Candidate in Financial Mathematics, Florida State University</p>
-  <div class="topnav">
-    <a class="badge" href="./">← Home</a>
-  </div>
 
-  <!-- TEACHING LIST -->
-  <div class="card">
-    <h2>Courses Taught</h2>
-    <ul>
-      <li><strong>Calculus and Analytic Geometry III</strong> — Instructor of Record, Dept. of Mathematics, Florida State University (Spring 2026)</li>
-      <li><strong>Calculus and Analytic Geometry III</strong> — Instructor of Record, Dept. of Mathematics, Florida State University (Fall 2025)</li>
-      <li><strong>Calculus and Analytic Geometry II</strong> — Instructor of Record, Dept. of Mathematics, Florida State University (Spring 2025)</li>
-      <li><strong>Calculus and Analytic Geometry II</strong> — Instructor of Record, Dept. of Mathematics, Florida State University (Fall 2024)</li>
-      <li><strong>Calculus and Analytic Geometry I</strong> — Instructor of Record, Dept. of Mathematics, Florida State University (Spring 2024)</li>
-      <li><strong>Discrete Mathematics II </strong> — Recitation Instructor, Dept. of Mathematics, Florida State University (Fall 2023)</li>
-      <li><strong>Discrete Mathematics I </strong> — Recitation Instructor, Dept. of Mathematics, Florida State University (Summer 2022, Spring 2023)</li>
-      <li><strong>Calculus I </strong> — Recitation Instructor, Dept. of Mathematics, Florida State University (Fall 2022)</li>
-      <li><strong>Precalculus Algebra </strong> — Instructor, Dept. of Mathematics, Florida State University (Spring 2022)</li>
-      
-      
-      
-    </ul>
-  </div>
-</main>
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>Teaching — A K M Rokonuzzaman Sonet</title>
+
+  <meta name="description"
+        content="Teaching experience of A K M Rokonuzzaman Sonet at Florida A&M University and Florida State University.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    /* ========================================
+       COLOR SETTINGS
+    ======================================== */
+
+    :root {
+      --bg: #ffffff;
+      --card: #f8faf9;
+      --text: #222222;
+      --muted: #60666b;
+      --brand: #174b36;
+      --accent: #e67e22;
+      --border: #dfe5e1;
+    }
+
+    html.dark {
+      --bg: #101412;
+      --card: #191f1c;
+      --text: #e8eaed;
+      --muted: #a9b0b6;
+      --brand: #8bc7a4;
+      --accent: #f2a65a;
+      --border: #303a34;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 22px 28px;
+    }
+
+
+    /* ========================================
+       NAVIGATION BAR
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 2px solid var(--brand);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--brand);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .links a.active {
+      font-weight: 700;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    #theme-toggle {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+
+    /* ========================================
+       PAGE HEADING
+    ======================================== */
+
+    .page-content {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 45px 28px;
+    }
+
+    .page-heading {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 22px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      margin: 0 0 12px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    .designation {
+      color: var(--brand);
+      font-weight: 600;
+      font-size: 16px;
+      margin: 4px 0;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--brand);
+      margin: 0 0 8px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+
+    /* ========================================
+       UNIVERSITY SECTIONS
+    ======================================== */
+
+    .university-heading {
+      margin-bottom: 20px;
+    }
+
+    .university-heading p {
+      margin: 3px 0;
+    }
+
+    .university-section {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 30px;
+    }
+
+
+    /* ========================================
+       CURRENT TEACHING
+    ======================================== */
+
+    .semester-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 18px;
+    }
+
+    .semester-card h3 {
+      color: var(--brand);
+      font-size: 18px;
+    }
+
+    .role {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 4px 0 10px;
+    }
+
+    .course-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    .course-list li {
+      margin: 8px 0;
+    }
+
+    .course-code {
+      font-weight: 600;
+    }
+
+
+    /* ========================================
+       PREVIOUS TEACHING HISTORY
+    ======================================== */
+
+    .teaching-history {
+      width: 100%;
+    }
+
+    .teaching-row {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 20px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .teaching-row:last-child {
+      border-bottom: none;
+    }
+
+    .term {
+      font-weight: 600;
+      color: var(--brand);
+      font-size: 14px;
+    }
+
+    .course-name {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .course-role {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 3px 0 0;
+    }
+
+
+    /* ========================================
+       AWARDS AND MENTORING
+    ======================================== */
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 15px;
+    }
+
+    .info-card p {
+      margin: 6px 0;
+    }
+
+    .info-card h3 {
+      color: var(--text);
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      margin-top: 30px;
+      padding: 15px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+
+    /* ========================================
+       MOBILE RESPONSIVENESS
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .links {
+        gap: 14px;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 18px 20px;
+      }
+
+      header {
+        position: static;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        gap: 12px;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .links a {
+        font-size: 13px;
+      }
+
+      .page-content {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .teaching-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .semester-card,
+      .info-card {
+        padding: 16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- ========================================
+       NAVIGATION BAR
+  ========================================= -->
+
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <a class="brand" href="./">
+          A K M R Sonet
+        </a>
+
+        <div class="nav-right">
+
+          <div class="links">
+
+            <a href="./">Home</a>
+
+            <a href="research.html">Research</a>
+
+            <a class="active"
+               href="teaching.html"
+               aria-current="page">
+              Teaching
+            </a>
+
+            <a href="projects.html">Projects</a>
+
+            <a href="cv.html">CV</a>
+
+            <a href="./#contact">Contact</a>
+
+          </div>
+
+          <button id="theme-toggle"
+                  aria-label="Toggle light and dark mode"
+                  title="Toggle theme">
+            🌙
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ========================================
+       MAIN PAGE CONTENT
+  ========================================= -->
+
+  <main class="page-content">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="page-heading">
+
+      <h1>Teaching</h1>
+
+      <p class="designation">
+        Visiting Assistant Professor of Mathematics
+      </p>
+
+      <p class="subtitle">
+        A K M Rokonuzzaman Sonet
+      </p>
+
+      <p class="subtitle">
+        Department of Mathematics,
+        Florida A&amp;M University
+      </p>
+
+      <p>
+        My teaching experience includes undergraduate
+        mathematics courses at Florida A&amp;M University
+        and Florida State University, with responsibilities
+        in classroom instruction, recitation, course
+        development, and undergraduate research mentoring.
+      </p>
+
+    </div>
+
+
+    <!-- ========================================
+         FLORIDA A&M UNIVERSITY
+    ========================================= -->
+
+    <section class="university-section"
+             id="famu">
+
+      <div class="university-heading">
+
+        <h2>Florida A&amp;M University</h2>
+
+        <p>
+          <strong>Visiting Assistant Professor</strong>
+        </p>
+
+        <p class="muted">
+          Department of Mathematics
+          | August 2026 – Present
+        </p>
+
+      </div>
+
+
+      <!-- ADD NEW SEMESTERS ABOVE FALL 2026 -->
+
+
+      <!-- FALL 2026 -->
+
+      <div class="semester-card">
+
+        <h3>Fall 2026</h3>
+
+        <p class="role">
+          Instructor of Record
+        </p>
+
+        <ul class="course-list">
+
+          <li>
+            <span class="course-code">MAC 2311</span>
+            — Calculus I
+          </li>
+
+          <li>
+            <span class="course-code">MAC 1105C</span>
+            — College Algebra
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- ========================================
+         FLORIDA STATE UNIVERSITY
+    ========================================= -->
+
+    <section class="university-section"
+             id="fsu">
+
+      <div class="university-heading">
+
+        <h2>Florida State University</h2>
+
+        <p>
+          <strong>Graduate Instructor</strong>
+        </p>
+
+        <p class="muted">
+          Department of Mathematics | 2022–2026
+        </p>
+
+      </div>
+
+
+      <div class="teaching-history">
+
+
+        <!-- SPRING 2026 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Spring 2026
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus and Analytic Geometry III
+            </p>
+
+            <p class="course-role">
+              Instructor of Record
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FALL 2025 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Fall 2025
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus and Analytic Geometry III
+            </p>
+
+            <p class="course-role">
+              Instructor of Record
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SPRING 2025 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Spring 2025
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus and Analytic Geometry II
+            </p>
+
+            <p class="course-role">
+              Instructor of Record
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FALL 2024 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Fall 2024
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus and Analytic Geometry II
+            </p>
+
+            <p class="course-role">
+              Instructor of Record
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUMMER 2024 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Summer 2024
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus I
+            </p>
+
+            <p class="course-role">
+              Course Development Assistant
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SPRING 2024 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Spring 2024
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus and Analytic Geometry I
+            </p>
+
+            <p class="course-role">
+              Instructor of Record
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FALL 2023 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Fall 2023
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Discrete Mathematics II
+            </p>
+
+            <p class="course-role">
+              Recitation Instructor
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SPRING 2023 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Spring 2023
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Discrete Mathematics I
+            </p>
+
+            <p class="course-role">
+              Recitation Instructor
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FALL 2022 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Fall 2022
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Calculus I
+            </p>
+
+            <p class="course-role">
+              Recitation Instructor
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUMMER 2022 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Summer 2022
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Discrete Mathematics I
+            </p>
+
+            <p class="course-role">
+              Recitation Instructor
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SPRING 2022 -->
+
+        <div class="teaching-row">
+
+          <div class="term">
+            Spring 2022
+          </div>
+
+          <div>
+
+            <p class="course-name">
+              Precalculus Algebra
+            </p>
+
+            <p class="course-role">
+              Instructor of Record
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         TEACHING AWARDS
+    ========================================= -->
+
+    <section id="awards">
+
+      <h2>Teaching Awards</h2>
+
+      <div class="info-card">
+
+        <h3>
+          Distinguished Teaching Assistant Award
+        </h3>
+
+        <p class="muted">
+          Florida State University | 2025
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         UNDERGRADUATE RESEARCH AND MENTORING
+    ========================================= -->
+
+    <section id="mentoring">
+
+      <h2>Undergraduate Research &amp; Mentoring</h2>
+
+      <div class="info-card">
+
+        <h3>
+          Asset–Liability Management and Duration Matching
+        </h3>
+
+        <p class="muted">
+          Florida A&amp;M University | Fall 2026
+        </p>
+
+        <p>
+          Undergraduate research supervision in financial
+          mathematics, focusing on asset–liability
+          management, bond duration, interest rate risk,
+          and portfolio immunization strategies.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span>
+      A K M Rokonuzzaman Sonet.
+
+      <br>
+
+      Built with GitHub Pages.
+
+    </div>
+
+  </footer>
+
+
+  <!-- ========================================
+       JAVASCRIPT
+  ========================================= -->
+
+  <script>
+
+    // Automatically update the copyright year.
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Light and dark mode.
+    // Uses the same preference as the homepage.
+
+    const themeButton =
+      document.getElementById("theme-toggle");
+
+    const themeKey = "prefers-theme";
+
+    function updateThemeButton() {
+
+      const dark =
+        document.documentElement.classList.contains("dark");
+
+      themeButton.textContent = dark ? "☀️" : "🌙";
+
+    }
+
+    if (localStorage.getItem(themeKey) === "dark") {
+
+      document.documentElement.classList.add("dark");
+
+    }
+
+    updateThemeButton();
+
+    themeButton.addEventListener("click", function () {
+
+      const dark =
+        document.documentElement.classList.toggle("dark");
+
+      localStorage.setItem(
+        themeKey,
+        dark ? "dark" : "light"
+      );
+
+      updateThemeButton();
+
+    });
+
+  </script>
+
 </body>
 </html>
